@@ -1,0 +1,30 @@
+.sobremim {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 32px;
+  background: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.sobremim h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  margin-top: 0px;
+  color: #ea580c;
+}
+.sobremim p {
+  font-size: 1.15rem;
+  color: #334155;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+.sobremim a {
+  color: #0ea5e9;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.sobremim a:hover {
+  color: #2563eb;
+  text-decoration: none;
+}

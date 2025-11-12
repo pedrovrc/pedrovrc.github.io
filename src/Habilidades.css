@@ -1,0 +1,72 @@
+.habilidades {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 32px;
+  background: #f1f5f9;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.habilidades h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  color: #2563eb;
+}
+/* Lista principal */
+.habilidades ul {
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+/* Sublistas */
+.habilidades li ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border: 2px solid #e0e7ef;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+/* Itens principais */
+.habilidades > ul > li {
+  font-size: 1.1rem;
+  color: #334155;
+  margin-bottom: 8px;
+  padding-left: 0;
+  position: relative;
+  font-weight: bold;
+}
+
+.habilidades li ul li {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 6px;
+  padding-left: 4px;
+  position: relative;
+  font-weight: bold;
+}
+
+/* Terceira ul aninhada: itens em linha, fonte discreta */
+.habilidades li ul ul {
+  border: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+.habilidades li ul ul li {
+  margin-bottom: 0;
+  padding-left: 0;
+  font-weight: 400;
+  font-style: italic;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+.habilidades li ul li:before {
+  content: '';
+}

@@ -1,0 +1,38 @@
+.apresentacao {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 32px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.apresentacao h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  margin-top: 0px;
+  color: #2d3748;
+}
+.apresentacao p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+.apresentacao-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.apresentacao-links a {
+  font-size: 0.98rem;
+  color: #64748b;
+  text-decoration: none;
+  padding: 2px 8px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.apresentacao-links a:hover {
+  background: #e0e7ef;
+  color: #2563eb;
+}
