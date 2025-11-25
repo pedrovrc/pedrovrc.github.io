@@ -17,15 +17,16 @@
   font-size: 1.2rem;
   color: #4a5568;
   margin-bottom: 8px;
+  margin-top: 24px;
 }
 .apresentacao-links {
-  margin-top: 12px;
+  margin-top: 24px;
   display: flex;
   gap: 16px;
   justify-content: center;
 }
 .apresentacao-links a {
-  font-size: 0.98rem;
+  font-size: 1.25rem;
   color: #64748b;
   text-decoration: none;
   padding: 2px 8px;
@@ -35,4 +36,9 @@
 .apresentacao-links a:hover {
   background: #e0e7ef;
   color: #2563eb;
+}
+
+.foto-apresentacao {
+  width: 200px; /* ajuste conforme necessário */
+  border-radius: 50%;
 }

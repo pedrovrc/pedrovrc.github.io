@@ -8,7 +8,13 @@ function Habilidades() {
       <ul>
         <li>Linguagens de Programação
             <ul>
-                <li>C / C++</li>
+                <li>C / C++
+                    <ul>
+                        <li>Interface de Terminais</li>
+                        <li>Manejo de Memória</li>
+                        <li>Orientação a Objeto</li>
+                    </ul>
+                </li>
                 <li>Python
                     <ul>
                         <li>Flask</li>

@@ -6,6 +6,7 @@ function Apresentacao() {
   return (
     <section className="apresentacao">
       <h1>Olá, eu sou Pedro Carvalho.</h1>
+      <img src="/img/foto.jpg" alt="Minha foto" className="foto-apresentacao" />
       <p>Sou um desenvolvedor de software em início de carreira, com 4+ anos de experiência
         em C/C++ e Python, atualmente estudando desenvolvimento web e buscando minha
         primeira oportunidade profissional na área.</p>

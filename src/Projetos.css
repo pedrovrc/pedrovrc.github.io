@@ -61,3 +61,32 @@
   color: #2563eb;
   text-decoration: underline;
 }
+
+.texto-claro-italico {
+  color: #74869e;
+  font-style: italic;
+}
+
+.tags-projeto {
+  justify-content: center;
+  align-self: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #bf50ff;
+  margin-top: 0px;
+  margin-bottom: 12px;
+}
+
+.tags-projeto span {
+  position: relative;
+  margin-right: 14px;
+}
+
+.tags-projeto span:not(:last-child)::after {
+  content: "•";
+  position: absolute;
+  margin-left: 4px;
+}

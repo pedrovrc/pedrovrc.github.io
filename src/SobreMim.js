@@ -8,21 +8,22 @@ function SobreMim() {
       <p>
         Venho de uma base sólida em C/C++ e Python em minha graduação, em que aprendi a importância de boas práticas
         e atenção aos detalhes. Durante meu projeto final da graduação, tive contato com
-        pesquisa e ciência de dados, que despertou meu interesse pela área. A partir disso, passei a estudar
-        desenvolvimento web, que se tornou meu foco atual. Amo programar e, no futuro, quero me consolidar
-        como desenvolvedor, unindo minha experiência técnica a projetos de paixão, como o desenvolvimento
-        de jogos indie.
+        pesquisa acadêmica e ciência de dados, que foi uma experiência muito construtiva. Após a graduação, passei a estudar
+        desenvolvimento web, que se tornou meu foco atual. Amo programar e estou buscando minha primeira oportunidade profissional,
+        aberto a aprender novas tecnologias e contribuir de qualquer maneira que eu puder. Quero crescer como desenvolvedor e
+        consolidar uma carreira em desenvolvimento de software, seja em web ou em outras áreas que eu venha a explorar.
       </p>
       <p>
         Também sou apaixonado por arte. Sou ilustrador digital por hobby, e adoro narrativas de ficção,
-        seja em séries, filmes ou videogames. Caso queira conhecer alguns dos meus trabalhos de
+        seja em séries, filmes ou videogames. Tenho o sonho de algum dia me tornar desenvolvedor/designer de jogos
+        eletrônicos. Caso queira conhecer alguns dos meus trabalhos de
         ilustração, <a href="https://pedrovrc-portfolio.carrd.co/">você pode vê-los aqui</a>. Além disso,
         o esporte sempre fez parte da minha vida, e o voleibol, meu favorito atualmente, me permitiu
-        reconectar com antigos amigos e manter o equilíbrio fora do trabalho.
+        reconectar com antigos amigos e manter o equilíbrio fora do trabalho e dos estudos.
       </p>
       <p>
         Estou buscando iniciar minha carreira com o pé direito, e estou aberto a oportunidades
-        que me permitam crescer e contribuir. Se quiser saber mais, entre em contato!
+        que me permitam crescer e contribuir. Entre em contato!
       </p>
     </section>
   );

@@ -10,7 +10,7 @@ function Experiencia() {
         <div className="experiencia-item">
           <h3>Polícia Federal (Sede - Brasília/DF)</h3>
           <span className="cargo">Estagiário de Suporte de TI</span>
-          <span className="periodo">Dez/2022 - Dez/2023</span>
+          <span className="periodo">2022/12 - 2023/12</span>
           <p>- Realizei manutenção preventiva e corretiva em computadores e notebooks. <br />
             - Participei da configuração e manutenção de redes e servidores, garantindo disponibilidade de serviços internos. <br />
             - Provi soluções gerais de TI para usuários finais, aumentando a eficiência operacional. <br />

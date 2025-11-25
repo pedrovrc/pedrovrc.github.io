@@ -18,12 +18,15 @@
   list-style: none;
   padding: 0;
   justify-content: center;
+  align-items: center;;
 }
 
 /* Sublistas */
 .habilidades li ul {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 0px;
+  margin-bottom: 12px;
   border: 2px solid #e0e7ef;
   font-weight: bold;
   font-size: 1rem;
@@ -42,8 +45,9 @@
 
 .habilidades li ul li {
   font-size: 1rem;
-  color: #64748b;
-  margin-bottom: 6px;
+  color: #5e688b;
+  margin-top: 6px;
+  margin-bottom: 12px;
   padding-left: 4px;
   position: relative;
   font-weight: bold;
@@ -51,15 +55,20 @@
 
 /* Terceira ul aninhada: itens em linha, fonte discreta */
 .habilidades li ul ul {
+  line-height: 0.6;
   border: none;
+  margin-top: 6px;
   margin-left: 0;
+  margin-right: 0;
   padding-left: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   font-size: 0.95rem;
   color: #94a3b8;
 }
 .habilidades li ul ul li {
+  color: #64748b;
   margin-bottom: 0;
   padding-left: 0;
   font-weight: 400;
