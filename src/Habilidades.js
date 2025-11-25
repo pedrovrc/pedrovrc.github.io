@@ -38,15 +38,15 @@ function Habilidades() {
             </ul>
         </li>
         <li>Dev Tools
-            <ul>
+            <ul className="dev-tools">
                 <li>Visual Studio Code</li>
                 <li>MySQL</li>
                 <li>Git/GitHub</li>
                 <li>Docker</li>
             </ul>
         </li>
-        <li>Outras Habilidades
-            <ul>
+        <li className="outras-habilidades">Outras Habilidades
+            <ul className="outras-habilidades-lista">
                 <li>Web Scraping</li>
                 <li>Ciência/Análise de Dados</li>
                 <li>Machine Learning</li>

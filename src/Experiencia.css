@@ -24,6 +24,8 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  width: 85%;
+  align-self: center;
 }
 .experiencia-item h3 {
   margin: 0 0 8px 0;
@@ -39,7 +41,14 @@
   color: #64748b;
   margin-bottom: 12px;
 }
-.experiencia-item p {
+.experiencia-item ul {
   margin: 0;
   color: #334155;
+  width: 85%;
+  align-self: center;
+}
+
+.experiencia-item ul li {
+  text-align: justify;
+  padding: 0 3%;
 }

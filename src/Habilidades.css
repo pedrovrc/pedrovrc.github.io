@@ -18,43 +18,58 @@
   list-style: none;
   padding: 0;
   justify-content: center;
-  align-items: center;;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
 }
 
-/* Sublistas */
-.habilidades li ul {
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-top: 0px;
-  margin-bottom: 12px;
-  border: 2px solid #e0e7ef;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #64748b;
+.outras-habilidades {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 /* Itens principais */
-.habilidades > ul > li {
-  font-size: 1.1rem;
+.habilidades ul li {
+  font-size: 1.4rem;
   color: #334155;
   margin-bottom: 8px;
   padding-left: 0;
   position: relative;
   font-weight: bold;
+  max-width: 60%;
+  min-width: 40%;
 }
 
-.habilidades li ul li {
+/* Sublistas */
+.habilidades ul li ul {
+  margin: 0 5% 12px 5%;
+  border: 2px solid #e0e7ef;
+  font-weight: bold;
   font-size: 1rem;
+  color: #64748b;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dev-tools {
+  flex-direction: column;
+}
+
+.outras-habilidades-lista {
+  flex-direction: column;
+}
+
+.habilidades ul li ul li {
+  font-size: 1.15rem;
   color: #5e688b;
   margin-top: 6px;
   margin-bottom: 12px;
-  padding-left: 4px;
   position: relative;
   font-weight: bold;
 }
 
-/* Terceira ul aninhada: itens em linha, fonte discreta */
-.habilidades li ul ul {
+.habilidades ul li ul li ul {
   line-height: 0.6;
   border: none;
   margin-top: 6px;
@@ -67,15 +82,15 @@
   font-size: 0.95rem;
   color: #94a3b8;
 }
-.habilidades li ul ul li {
+
+.habilidades ul li ul li ul li {
+  max-width: none;
+  min-width: none;
   color: #64748b;
   margin-bottom: 0;
   padding-left: 0;
   font-weight: 400;
   font-style: italic;
   white-space: nowrap;
-  font-size: 0.9rem;
-}
-.habilidades li ul li:before {
-  content: '';
+  font-size: 1rem;
 }

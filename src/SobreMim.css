@@ -17,6 +17,9 @@
   color: #334155;
   margin-bottom: 12px;
   line-height: 1.4;
+  padding: 0 10%;
+  align-self: center;
+  text-align: justify;
 }
 .sobremim a {
   color: #0ea5e9;
