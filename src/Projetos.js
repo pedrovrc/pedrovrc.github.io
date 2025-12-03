@@ -5,11 +5,11 @@ function Projetos() {
   return (
     <section className="projetos">
       <h2>Meus Projetos</h2>
-      <h4>Aqui estão alguns de meus projetos. Mais projetos podem ser encontrados <a href="https://github.com/pedrovrc/">no meu GitHub</a>.</h4>
+      <p className="texto-regular" style={{marginBottom: "20px"}}>Aqui estão alguns de meus projetos.<br/>Mais projetos podem ser encontrados <a href="https://github.com/pedrovrc/">no meu GitHub</a>.</p>
       <div className="projetos-lista">
         <div className="projeto-card">
           <h3>Classificador de Rejuvenescimento de Software</h3>
-          <p>Um projeto que utiliza técnicas de aprendizado de máquina para classificar mensagens de texto com relação à temática de rejuvenescimento de software.</p>
+          <p className="texto-regular">Um projeto que utiliza técnicas de aprendizado de máquina para classificar mensagens de texto com relação à temática de rejuvenescimento de software.</p>
           <div className="tags-projeto">
             <span>Python</span>
             <span>Machine Learning</span>
@@ -20,7 +20,7 @@ function Projetos() {
         </div>
         <div className="projeto-card">
           <h3>Rest in Peace (or not)</h3>
-          <p>Um projeto de desenvolvimento de jogo, com uma engine simplificada baseada completamente em C++ e SDL.</p>
+          <p className="texto-regular">Um projeto de desenvolvimento de jogo, com uma engine simplificada baseada completamente em C++ e SDL.</p>
           <div className="tags-projeto">
             <span>C++</span>
             <span>SDL</span>
@@ -32,7 +32,7 @@ function Projetos() {
         </div>
         <div className="projeto-card">
           <h3>Estudos de Django</h3>
-          <p>Mini projetos desenvolvidos para facilitar o aprendizado de Django.</p>
+          <p className="texto-regular">Mini projetos desenvolvidos para facilitar o aprendizado de Django.</p>
           <div className="tags-projeto">
             <span>Python</span>
             <span>Django</span>
@@ -42,7 +42,7 @@ function Projetos() {
         </div>
         <div className="projeto-card">
           <h3>Estudos de Flask</h3>
-          <p>Mini projetos desenvolvidos para facilitar o aprendizado de Flask.</p>
+          <p className="texto-regular">Mini projetos desenvolvidos para facilitar o aprendizado de Flask.</p>
           <div className="tags-projeto">
             <span>Python</span>
             <span>Flask</span>
@@ -52,7 +52,7 @@ function Projetos() {
         </div>
         <div className="projeto-card">
           <h3>Site de Portfólio</h3>
-          <p>Site construído com React para apresentar meus projetos e habilidades <span className="texto-claro-italico">(você está aqui)</span>.</p>
+          <p className="texto-regular">Site construído com React para apresentar meus projetos e habilidades <span className="texto-claro-italico">(você está aqui)</span>.</p>
           <div className="tags-projeto">
             <span>JavaScript</span>
             <span>React</span>

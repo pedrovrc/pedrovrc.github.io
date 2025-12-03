@@ -4,7 +4,7 @@ import './Habilidades.css';
 function Habilidades() {
   return (
     <section className="habilidades">
-      <h2>Minhas Habilidades</h2>
+      <h2>Habilidades</h2>
       <ul>
         <li>Linguagens de Programação
             <ul>
@@ -45,12 +45,32 @@ function Habilidades() {
                 <li>Docker</li>
             </ul>
         </li>
-        <li className="outras-habilidades">Outras Habilidades
+        <li className="outras-habilidades">Habilidades e Interesses
             <ul className="outras-habilidades-lista">
+                <li>Desenvolvimento Web</li>
                 <li>Web Scraping</li>
                 <li>Ciência/Análise de Dados</li>
                 <li>Machine Learning</li>
                 <li>Desenvolvimento de Jogos</li>
+            </ul>
+        </li>
+        <li>Idiomas
+            <ul>
+                <li>Português
+                    <ul>
+                        <li>Nativo</li>
+                    </ul>
+                </li>
+                <li>Inglês
+                    <ul>
+                        <li>Fluente</li>
+                    </ul>
+                </li>
+                <li>Espanhol
+                    <ul>
+                        <li>Básico</li>
+                    </ul>
+                </li>
             </ul>
         </li>
       </ul>

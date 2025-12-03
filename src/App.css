@@ -13,6 +13,18 @@
   }
 }
 
+.texto-regular {
+  font-size: 1.2rem;
+  color: #1e2430;
+}
+
+@media (max-width: 800px) {
+  .texto-regular {
+    font-size: 1.05rem;
+    line-height: 1.4rem;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

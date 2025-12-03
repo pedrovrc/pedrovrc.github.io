@@ -1,17 +1,18 @@
 .habilidades {
   margin: 40px auto;
   max-width: 800px;
-  padding: 32px;
-  background: #f1f5f9;
+  background: #f3f3ff;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding-bottom: 24px;
+  padding-top: 16px;
 }
 
 .habilidades h2 {
   font-size: 2rem;
   margin-bottom: 16px;
   margin-top: 0px;
-  color: #2563eb;
+  color: #4a4aee;
 }
 /* Lista principal */
 .habilidades ul {
@@ -37,17 +38,19 @@
   padding-left: 0;
   position: relative;
   font-weight: bold;
-  max-width: 60%;
+  max-width: 70%;
   min-width: 40%;
 }
 
 /* Sublistas */
 .habilidades ul li ul {
   margin: 0 5% 12px 5%;
-  border: 2px solid #e0e7ef;
+  border: 2px solid #b2b2f0;
+  border-radius: 16px;
   font-weight: bold;
   font-size: 1rem;
   color: #64748b;
+  background-color: #fff;
   display: flex;
   flex-wrap: wrap;
 }
@@ -61,8 +64,8 @@
 }
 
 .habilidades ul li ul li {
-  font-size: 1.15rem;
-  color: #5e688b;
+  font-size: 1.25rem;
+  color: #4e5f7c;
   margin-top: 6px;
   margin-bottom: 12px;
   position: relative;
@@ -79,18 +82,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  font-size: 0.95rem;
-  color: #94a3b8;
 }
 
 .habilidades ul li ul li ul li {
   max-width: none;
   min-width: none;
-  color: #64748b;
+  color: #5a6d8f;
   margin-bottom: 0;
   padding-left: 0;
-  font-weight: 400;
+  font-weight: normal;
   font-style: italic;
   white-space: nowrap;
-  font-size: 1rem;
+  font-size: 1.15rem;
+  display: flex;
+  justify-content: center;
 }

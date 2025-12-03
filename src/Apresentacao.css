@@ -1,42 +1,41 @@
 .apresentacao {
   text-align: center;
-  margin: 40px auto;
+  margin: auto auto 40px auto;
   max-width: 800px;
-  padding: 32px;
-  background: #f9f9f9;
+  background: #cacaff;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding-bottom: 24px;
+  padding-top: 16px;
 }
 .apresentacao h1 {
   font-size: 2.5rem;
   margin-bottom: 16px;
-  margin-top: 0px;
-  color: #2d3748;
+  color: #3636bb;
 }
 .apresentacao p {
-  font-size: 1.2rem;
-  color: #4a5568;
+  color: #2d3748;
   margin-bottom: 8px;
   margin-top: 24px;
   margin: 20px 10%;;
   text-align: justify;
 }
 .apresentacao-links {
-  margin-top: 24px;
+  padding-top: 10px;
   display: flex;
   gap: 16px;
   justify-content: center;
 }
 .apresentacao-links a {
   font-size: 1.25rem;
-  color: #64748b;
+  color: #3636bb;
   text-decoration: none;
   padding: 2px 8px;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
 }
 .apresentacao-links a:hover {
-  background: #e0e7ef;
+  background: #f6f3ff;
   color: #2563eb;
 }
 

@@ -1,16 +1,25 @@
 .experiencia {
   margin: 40px auto;
   max-width: 800px;
-  padding: 32px;
-  background: #f1f5f9;
+  background: #f3f3ff;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding-bottom: 24px;
+  padding-top: 16px;
 }
 .experiencia h2 {
   font-size: 2rem;
   margin-bottom: 24px;
   margin-top: 0px;
-  color: #ea580c;
+  color: #4a4aee;
+}
+.experiencia-item h3 {
+  margin: 0 0 8px 0;
+  color: #2563eb;
+  font-size: 1.5rem;
+}
+h4 {
+  margin: 24px 20px;
 }
 .experiencia-lista {
   display: flex;
@@ -27,28 +36,25 @@
   width: 85%;
   align-self: center;
 }
-.experiencia-item h3 {
-  margin: 0 0 8px 0;
-  color: #2563eb;
-}
 .cargo {
   font-weight: bold;
   color: #334155;
   margin-bottom: 4px;
+  font-size: 1.15rem;
 }
 .periodo {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #64748b;
   margin-bottom: 12px;
 }
 .experiencia-item ul {
   margin: 0;
   color: #334155;
-  width: 85%;
+  width: 90%;
   align-self: center;
 }
 
 .experiencia-item ul li {
   text-align: justify;
-  padding: 0 3%;
+  padding: 0 2%;
 }
