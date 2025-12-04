@@ -10,7 +10,7 @@ function Experiencia() {
         <div className="experiencia-item">
           <h3>Polícia Federal (Sede - Brasília/DF)</h3>
           <span className="cargo">Estagiário de Suporte de TI</span>
-          <span className="periodo">2022/12 - 2023/12</span>
+          <span className="periodo">2021/12 - 2022/12</span>
           <ul className="texto-regular">
             <li>Realizei manutenção preventiva e corretiva em computadores e notebooks;</li>
             <li>Participei da configuração e manutenção de redes e servidores, garantindo disponibilidade de serviços internos;</li>

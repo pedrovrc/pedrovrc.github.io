@@ -1,12 +1,17 @@
 .contato {
   margin: auto;
   max-width: 800px;
-  background: #f3f3ff;
+  background: linear-gradient(0deg, #eeeeff 20%, #f3f3ff 100%);
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0px 4px 6px rgba(149, 18, 201, 0.2);
   padding-bottom: 24px;
   padding-top: 16px;
 }
+
+.contato p {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 .contato h2 {
   font-size: 2rem;
   margin-bottom: 24px;
