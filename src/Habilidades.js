@@ -10,18 +10,18 @@ import { IoLogoJavascript, IoLogoCss3, IoCodeWorking, IoLanguage } from "react-i
 import { MdDataObject, MdOutlineSoupKitchen } from "react-icons/md";
 import { VscGraphLine, VscVscode } from "react-icons/vsc";
 
-function Habilidades() {
+function Habilidades({ idioma }) {
   return (
     <section className="habilidades">
-      <h2>Habilidades</h2>
+      <h2>{idioma === 'pt' ? 'Habilidades' : 'Skills'}</h2>
       <ul>
-        <li><span className="icon-header"><MdDataObject /></span><span>Linguagens de Programação</span>
+        <li><span className="icon-header"><MdDataObject /></span><span>{idioma === 'pt' ? 'Linguagens de Programação' : 'Programming Languages'}</span>
             <ul>
                 <li><span className="icon-header"><SiCplusplus /></span><span>C / C++</span>
                     <ul>
-                        <li><span className="icon"><FaTerminal /></span><span>Interface de Terminais</span></li>
-                        <li><span className="icon"><LuMemoryStick /></span><span>Manejo de Memória</span></li>
-                        <li><span className="icon"><IoCodeWorking /></span><span>Orientação a Objeto</span></li>
+                        <li><span className="icon"><FaTerminal /></span><span>{idioma === 'pt' ? 'Interface de Terminais' : 'Terminal Interfaces'}</span></li>
+                        <li><span className="icon"><LuMemoryStick /></span><span>{idioma === 'pt' ? 'Manejo de Memória' : 'Memory Management'}</span></li>
+                        <li><span className="icon"><IoCodeWorking /></span><span>{idioma === 'pt' ? 'Orientação a Objeto' : 'Object-Oriented Programming'}</span></li>
                     </ul>
                 </li>
                 <li><span className="icon-header"><FaPython /></span><span>Python</span>
@@ -54,30 +54,30 @@ function Habilidades() {
                 <li><span className="icon"><FaDocker /></span><span>Docker</span></li>
             </ul>
         </li>
-        <li><span className="icon-header"><GiSkills /></span><span>Habilidades e Interesses</span>
+        <li><span className="icon-header"><GiSkills /></span><span>{idioma === 'pt' ? 'Habilidades e Interesses' : 'Skills and Interests'}</span>
             <ul className="outras-habilidades-lista">
-                <li><span className="icon"><FaCode /></span><span>Desenvolvimento Web</span></li>
-                <li><span className="icon"><TbPick /></span><span>Web Scraping</span></li>
-                <li><span className="icon"><FaDatabase /></span><span>Ciência/Análise de Dados</span></li>
-                <li><span className="icon"><LuBrainCircuit /></span><span>Machine Learning</span></li>
-                <li><span className="icon"><FaGamepad /></span><span>Desenvolvimento de Jogos</span></li>
+                <li><span className="icon"><FaCode /></span><span>{idioma === 'pt' ? 'Desenvolvimento Web' : 'Web Development'}</span></li>
+                <li><span className="icon"><TbPick /></span><span>{idioma === 'pt' ? 'Web Scraping' : 'Web Scraping'}</span></li>
+                <li><span className="icon"><FaDatabase /></span><span>{idioma === 'pt' ? 'Ciência/Análise de Dados' : 'Data Science/Analysis'}</span></li>
+                <li><span className="icon"><LuBrainCircuit /></span><span>{idioma === 'pt' ? 'Machine Learning' : 'Machine Learning'}</span></li>
+                <li><span className="icon"><FaGamepad /></span><span>{idioma === 'pt' ? 'Desenvolvimento de Jogos' : 'Game Development'}</span></li>
             </ul>
         </li>
-        <li><span className="icon-header"><IoLanguage /></span><span>Idiomas</span>
+        <li><span className="icon-header"><IoLanguage /></span><span>{idioma === 'pt' ? 'Idiomas' : 'Languages'}</span>
             <ul>
-                <li>Português
+                <li>{idioma === 'pt' ? 'Português' : 'Portuguese'}
                     <ul>
-                        <li>Nativo</li>
+                        <li>{idioma === 'pt' ? 'Nativo' : 'Native'}</li>
                     </ul>
                 </li>
-                <li>Inglês
+                <li>{idioma === 'pt' ? 'Inglês' : 'English'}
                     <ul>
-                        <li>Fluente</li>
+                        <li>{idioma === 'pt' ? 'Fluente' : 'Fluent'}</li>
                     </ul>
                 </li>
-                <li>Espanhol
+                <li>{idioma === 'pt' ? 'Espanhol' : 'Spanish'}
                     <ul>
-                        <li>Básico</li>
+                        <li>{idioma === 'pt' ? 'Básico' : 'Basic'}</li>
                     </ul>
                 </li>
             </ul>
