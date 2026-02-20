@@ -1,4 +1,4 @@
-# Pedro Carvalho — Personal Portfolio
+# Personal Portfolio
 
 Small React + Tailwind site that hosts my hero section, CV, and a few stub pages. Text is served from a JSON file so I can flip between Portuguese and English without duplicating content.
 
