@@ -58,7 +58,7 @@ const Hero = () => {
             >
                 <div className="text-center relative">
                     <img
-                        className="w-40 rounded-full mx-auto"
+                        className="w-40 rounded-full mx-auto border-2 border-fuchsia-400"
                         src={photo}
                         alt="Profile picture"
                     />

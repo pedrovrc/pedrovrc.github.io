@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import Spinner from '../components/Spinner';
 
-const DATA_URL = 'http://localhost:8000/text';
-
 const Curriculum = () => {
+  const DATA_URL = 'http://localhost:8000/text';
   const { lang } = useLanguage();
   const [cvData, setCvData] = useState(null);
   const [status, setStatus] = useState('loading'); // loading | ready | error
@@ -112,7 +111,7 @@ const Curriculum = () => {
           <h3 className="text-2xl font-semibold mb-4">{skills?.interests?.title}</h3>
           <div className="flex gap-3">
             {skills?.interests?.bullets?.map((interest) => (
-              <span key={interest} className="rounded-full bg-indigo-100 px-4 py-1 text-1xl font-medium text-indigo-700">
+              <span key={interest} className="rounded-full bg-indigo-100 px-4 py-1 text-1xl font-medium text-indigo-700 text-center flex items-center justify-center">
                 {interest}
               </span>
             ))}
@@ -137,15 +136,16 @@ const Curriculum = () => {
       <section className="mb-12  mr-12 ml-12">
         <h2 className="text-3xl font-bold text-center mb-6">{background?.title}</h2>
         <div className="space-y-6">
-          {background?.degrees?.map(({ title, institution, period, comment }) => (
-            <article key={title} className="rounded-lg border border-indigo-100 shadow-sm overflow-hidden">
+          {background?.degrees?.map(({ title, institution, period, comment, linkText, link }) => (
+            <article key={title} className="rounded-lg border border-indigo-100 shadow-sm overflow-hidden leading-none">
               <div className="bg-indigo-500 px-5 py-4">
                 <h3 className="text-2xl font-semibold text-white ml-2">{title}</h3>
               </div>
-              <div className="bg-white px-5 py-4">
-                <p className="text-base text-gray-700 font-semibold ml-2">{institution}</p>
-                <p className="text-sm text-gray-500 mb-3 ml-2">{period}</p>
-                {comment && <p className="text-base text-gray-700 text-justify ml-2 mr-2 mb-2">{comment}</p>}
+              <div className="bg-white px-5 py-4 ml-2 mr-4 mb-2 text-justify">
+                <p className="text-base text-gray-700 font-semibold">{institution}</p>
+                <p className="text-sm text-gray-500 mb-3">{period}</p>
+                {comment && <p className="text-base text-gray-700">{comment}</p>}
+                <a className="text-sm font-semibold text-indigo-500 hover:text-fuchsia-400 underline" href={link} target="_blank" rel="noopener noreferrer">{linkText}</a>
               </div>
             </article>
           ))}
@@ -167,7 +167,7 @@ const Curriculum = () => {
               <div className="bg-white px-5 py-4">
                 <p className="text-base text-gray-700 font-semibold ml-2">{company}</p>
                 <p className="text-sm text-gray-500 mb-3 ml-2">{location} • {period}</p>
-                <ul className="list-disc list-inside text-base text-gray-700 text-justify space-y-1 ml-2 mr-2 mb-2">
+                <ul className="list-disc list-inside text-base text-gray-700 text-justify ml-2 mr-6 mb-2">
                   {description.map((item) => (
                     <li key={item}>{item}</li>
                   ))}

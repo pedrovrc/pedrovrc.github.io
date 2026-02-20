@@ -1,10 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import LangMenu from '../components/LangMenu'
+import { useLanguage } from '../context/LanguageContext'
 
 const Navbar = ({ className = '' }) => {
-    const baseLinkClass = 'flex items-center justify-center text-white hover:bg-white hover:text-indigo-900 rounded-md px-3 py-2 transition-colors duration-150';
-    const activeLinkClass = 'flex items-center justify-center bg-white text-indigo-900 font-semibold hover:bg-white/90 hover:text-indigo-900 rounded-md px-3 py-2 transition-colors duration-150';
+    const DATA_URL = 'http://localhost:8000/text'
+    const { lang } = useLanguage()
+    const [navTitle, setNavTitle] = useState('Pedro\'s Portfolio')
+    const [status, setStatus] = useState('idle')
+
+    useEffect(() => {
+        const controller = new AbortController()
+
+        const fetchNavTitle = async () => {
+            try {
+                setStatus('loading')
+                const res = await fetch(DATA_URL, { signal: controller.signal })
+                if (!res.ok) throw new Error('Failed to load nav title')
+                const data = await res.json()
+                setNavTitle(data[lang]?.navTitle || "Pedro's Portfolio")
+                setStatus('ready')
+            } catch (err) {
+                if (err.name === 'AbortError') return
+                console.error(err)
+                setStatus('error')
+            }
+        }
+
+        fetchNavTitle()
+
+        return () => controller.abort()
+    }, [lang])
+
+    const baseLinkClass = 'flex items-center justify-center text-white hover:bg-fuchsia-400 hover:text-white rounded-full px-3 py-2 transition-colors duration-150';
+    const activeLinkClass = 'flex items-center justify-center bg-white text-indigo-900 font-semibold hover:bg-fuchsia-400/90 hover:text-white/90 rounded-full px-3 transition-colors duration-150';
     const linkClass = ({ isActive }) => (isActive ? activeLinkClass : baseLinkClass);
 
     return (
@@ -14,10 +43,10 @@ const Navbar = ({ className = '' }) => {
                     <div
                         className="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
                     >
-                        <NavLink className="flex shrink-0 items-center mr-4" to="/index.html">
+                        <NavLink className="flex shrink-0 items-center mr-4" to="/">
                             <span className="hidden md:block text-white text-2xl font-bold ml-2"
                             >
-                                Pedro's Portfolio
+                                {status === 'error' ? "Pedro's Portfolio" : navTitle}
                             </span>
                         </NavLink>
                         <div className="md:ml-auto">
@@ -52,7 +81,7 @@ const Navbar = ({ className = '' }) => {
                                 >
                                     About
                                 </NavLink>
-                                <LangMenu buttonClass={`${baseLinkClass} flex flex-col items-center text-sm h-full justify-center`} />
+                                <LangMenu buttonClass={`${baseLinkClass}`} />
                             </div>
                         </div>
                     </div>
