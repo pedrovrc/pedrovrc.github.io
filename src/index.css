@@ -2,10 +2,6 @@
 @import "tailwindcss";
 
 @theme {
-    --grid-70-30: 70% 28%;
     --font-display: "Roboto", sans-serif;
-}
-
-@utility grid-cols-70-30 {
-    grid-template-columns: var(--grid-70-30);
+    --color-regal-blue: #243c5a;
 }

@@ -1,16 +1,40 @@
-# React + Vite
+# Pedro Carvalho — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Small React + Tailwind site that hosts my hero section, CV, and a few stub pages. Text is served from a JSON file so I can flip between Portuguese and English without duplicating content.
 
-Currently, two official plugins are available:
+## Contents
+- Language toggle managed by `LanguageContext`.
+- Curriculum page that renders skills/background/experience straight from `websiteData.json`.
+- Router setup for Home, CV, Projects, About, Contact, plus a placeholder project-detail route.
+- Tailwind styling, sticky navbar, and a JSON server (`npm run server`) that feeds copy during development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
+- React 19 + React Router 7
+- Tailwind CSS 4
+- Vite
+- JSON Server
 
-## React Compiler
+## Run It Locally
+1. Install dependencies: `npm install`
+2. Start the JSON server (needed for text data): `npm run server`
+3. In another terminal, run the dev server: `npm run dev`
+4. Open the printed URL (usually `http://localhost:5173`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
+- `npm run dev` – start Vite dev server
+- `npm run build` – production build
+- `npm run preview` – preview the build
+- `npm run lint` – run ESLint
+- `npm run server` – serve `src/websiteData.json` on port 8000
 
-## Expanding the ESLint configuration
+## Data Notes
+All strings live in [src/websiteData.json](src/websiteData.json). Each language block includes:
+- `title` / `subtitle` for the hero
+- `cv` with `skills`, `background`, `experience` used by [Curriculum](src/pages/Curriculum.jsx)
+- `about` copy for future About page sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Outside the language blocks there’s a `contactInfo` object (email, LinkedIn, GitHub) that will back the Contact page when it’s implemented.
+
+## Next Steps
+1. Finish BrowseProjects and Contact pages.
+2. Hook the site to a real back end (or CMS) and retire the mock API.

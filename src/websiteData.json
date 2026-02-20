@@ -1,0 +1,231 @@
+{
+    "text": {
+        "pt": {
+            "title": "Olá, eu sou Pedro Carvalho",
+            "subtitle": "Sou um Web Dev em início de carreira. Bem-vindo(a) ao meu site!",
+            "cv": {
+                "opening": "Sou um desenvolvedor de software em início de carreira, com 4+ anos de experiência em C/C++ e Python em projetos da graduação. Concluí minha graduação em Engenharia de Computação no final de 2024 e, no último ano, tenho estudado desenvolvimento web, recentemente focando em desenvolvimento front-end com React e Tailwind. Também experimentei um pouco as funcionalidades de back-end usando Django e Flask.",
+                "jobseek": "Atualmente, estou buscando minha primeira oportunidade profissional na área. Estou disposto a contribuir como puder e aberto a aprender novas tecnologias para crescer como desenvolvedor.",
+                "skills": {
+                    "title": "Habilidades",
+                    "programlangs": {
+                        "title": "Linguagens de Programação",
+                        "cpp": {
+                            "title": "C/C++",
+                            "bullets": [
+                                "Interface de Terminais",
+                                "Manejo de Memória",
+                                "Orientação a Objeto"
+                            ]
+                        },
+                        "python": {
+                            "title": "Python",
+                            "bullets": [
+                                "Django",
+                                "Flask",
+                                "Pandas",
+                                "NumPy",
+                                "Scikit-learn",
+                                "OpenCV"
+                            ]
+                        },
+                        "javascript": {
+                            "title": "JavaScript",
+                            "bullets": [
+                                "React.js",
+                                "Node.js",
+                                "Vue.js"
+                            ]
+                        }
+                    },
+                    "devtools": {
+                        "title": "Dev Tools",
+                        "bullets": [
+                            "Visual Studio Code",
+                            "MySQL",
+                            "Git / GitHub",
+                            "Docker"
+                        ]
+                    },
+                    "interests": {
+                        "title": "Interesses",
+                        "bullets": [
+                            "Desenvolvimento Web",
+                            "Ciência/Análise de Dados",
+                            "Desenvolvimento de Jogos"
+                        ]
+                    },
+                    "languages": {
+                        "title": "Idiomas",
+                        "pt": {
+                            "name": "Português Brasileiro",
+                            "level": "Nativo"
+                        },
+                        "en": {
+                            "name": "Inglês",
+                            "level": "Fluente"
+                        },
+                        "sp": {
+                            "name": "Espanhol",
+                            "level": "Básico"
+                        }
+                    }
+                },
+                "background": {
+                    "title": "Formação Acadêmica",
+                    "degrees": [
+                        {
+                            "title": "Bacharelado em Engenharia de Computação",
+                            "institution": "Universidade de Brasília (UnB)",
+                            "period": "2017/08 - 2024/12",
+                            "comment": "Trabalho de Conclusão publicado no 23º Simpósio Brasileiro de Qualidade de Software (SBQS 2024) - Artigo: Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution"
+                        }
+                    ]
+                },
+                "experience": {
+                    "title": "Experiência Profissional",
+                    "comment": "Sou um desenvolvedor em início de carreira. Me ajude a adicionar a essa lista!",
+                    "jobs": [
+                        {
+                            "title": "Estagiário de Suporte de TI",
+                            "company": "Polícia Federal",
+                            "location": "Sede - Brasília/DF",
+                            "period": "2021/12 - 2022/12",
+                            "description": [
+                                "Realizei manutenção preventiva e corretiva em computadores e notebooks;",
+                                "Participei da configuração e manutenção de redes e servidores, garantido disponibilidade de serviços internos;",
+                                "Provi soluções gerais de TI para usuários finais, aumentando a eficiência operacional."
+                            ]
+                        }
+                    ]
+                }
+            },
+            "about": {
+                "title": "Sobre Mim",
+                "mainText": [
+                    "Venho de uma base sólida em C/C++ e Python em minha graduação, em que aprendi a importância de boas práticas e atenção aos detalhes. Durante meu projeto final da graduação, tive contato com pesquisa acadêmica e ciência de dados, que foi uma experiência muito construtiva que me permitiu publicar um artigo científico. Após a graduação, passei a estudar desenvolvimento web, que se tornou meu foco atual.",
+                    "Amo programar e estou buscando minha primeira oportunidade profissional, aberto a aprender novas tecnologias e contribuir de toda maneira que puder. Quero crescer como desenvolvedor e consolidar uma carreira em desenvolvimento de software, seja em web ou em outras áreas que venha a explorar.",
+                    "Também sou apaixonado por arte. Sou ilustrador digital por hobby, e adoro narrativas de ficção, seja em séries, filmes, livros ou videogames. Tenho também o sonho de algum dia me tornar desenvolvedor/designer de jogos digitais.",
+                    "Além disso, o esporte sempre fez parte da minha vida, e o voleibol, meu favorito atualmente, me permitiu reconectar com antigos amigos e manter o equilíbrio fora do trabalho e dos estudos.",
+                    "Estou buscando iniciar minha carreira com o pé direito, e estou aberto a oportunidades que me permitam crescer e contribuir. Entre em contato!"
+                ]
+            }
+        },
+        "en": {
+            "title": "Hello, I'm Pedro Carvalho",
+            "subtitle": "I am an early-career web developer. Welcome to my website!",
+            "cv": {
+                "opening": "I'm an early-career software developer with 4+ years of experience in C/C++ and Python in undergrad projects. I've graduated in Computer Engineering at the end of 2024 and, over the last year, I've been studying web development, recently focusing on front-end development with React and Tailwind. I've also experimented a bit with back-end functionalities with Django and Flask.",
+                "jobseek": "I am currently seeking my first professional opportunity in the field. I am eager to contribute wherever I can and open to learning new technologies to grow as a developer.",
+                "skills": {
+                    "title": "Skills",
+                    "programlangs": {
+                        "title": "Programming Languages",
+                        "cpp": {
+                            "title": "C/C++",
+                            "bullets": [
+                                "Terminal Interface",
+                                "Memory Management",
+                                "Object-Oriented Programming"
+                            ]
+                        },
+                        "python": {
+                            "title": "Python",
+                            "bullets": [
+                                "Django",
+                                "Flask",
+                                "Pandas",
+                                "NumPy",
+                                "Scikit-learn",
+                                "OpenCV"
+                            ]
+                        },
+                        "javascript": {
+                            "title": "JavaScript",
+                            "bullets": [
+                                "React.js",
+                                "Node.js",
+                                "Vue.js"
+                            ]
+                        }
+                    },
+                    "devtools": {
+                        "title": "Dev Tools",
+                        "bullets": [
+                            "Visual Studio Code",
+                            "MySQL",
+                            "Git / GitHub",
+                            "Docker"
+                        ]
+                    },
+                    "interests": {
+                        "title": "Interests",
+                        "bullets": [
+                            "Web Development",
+                            "Data Science/Analysis",
+                            "Game Development"
+                        ]
+                    },
+                    "languages": {
+                        "title": "Languages",
+                        "pt": {
+                            "name": "Brazilian Portuguese",
+                            "level": "Native"
+                        },
+                        "en": {
+                            "name": "English",
+                            "level": "Fluent"
+                        },
+                        "sp": {
+                            "name": "Spanish",
+                            "level": "Basic"
+                        }
+                    }
+                },
+                "background": {
+                    "title": "Academic Background",
+                    "degrees": [
+                        {
+                            "title": "Bachelor's Degree in Computer Engineering",
+                            "institution": "University of Brasília (UnB)",
+                            "period": "2017/08 - 2024/12",
+                            "comment": "Thesis published in the 23rd Brazilian Symposium on Software Quality (SBQS 2024) - Paper: Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution"
+                        }
+                    ]
+                },
+                "experience": {
+                    "title": "Professional Experience",
+                    "comment": "I am an early career developer. Help me add to this list!",
+                    "jobs": [
+                        {
+                            "title": "IT Support Intern",
+                            "company": "Brazilian Federal Police",
+                            "location": "Headquarters - Brasília/DF",
+                            "period": "2021/12 - 2022/12",
+                            "description": [
+                                "Performed preventive and corrective maintenance on computers and laptops;",
+                                "Participated in the configuration and maintenance of networks and servers, ensuring the availability of internal services;",
+                                "Provided general IT solutions for end users, increasing operational efficiency."
+                            ]
+                        }
+                    ]
+                }
+            },
+            "about": {
+                "title": "About me",
+                "mainText": [
+                    "I come from a solid background in C/C++ and Python in my undergraduate studies, where I learned the importance of good practices and attention to detail. During my final undergraduate project, I had contact with academic research and data science, which was a very constructive experience that allowed me to publish a scientific paper. After graduation, I began studying web development, which has become my current focus.",
+                    "I love programming and am looking for my first professional opportunity, open to learning new technologies and contributing in every way I can. I want to grow as a developer and build a career in software development, whether in web or other areas I may explore.",
+                    "I am also passionate about art. I am a digital illustrator by hobby, and I love fiction narratives, whether in series, movies, books or video games. I dream of some day becoming a digital game developer/designer.",
+                    "Additionally, sports have always been a part of my life, and volleyball, my current favorite, has allowed me to reconnect with old friends and maintain balance outside of work and studies.",
+                    "I am looking to start my career on the right foot, and I am open to opportunities that allow me to grow and contribute. Get in touch!"
+                ]
+            }
+        }
+    },
+    "contactInfo": {
+        "email": "pedrovrc.dev@gmail.com",
+        "linkedin": "linkedin.com/in/pedrovrc-dev",
+        "github": "github.com/pedrovrc"
+    }
+}
