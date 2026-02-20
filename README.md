@@ -18,7 +18,7 @@ Small React + Tailwind site that hosts my hero section, CV, and a few stub pages
 1. Install dependencies: `npm install`
 2. Start the JSON server (needed for text data): `npm run server`
 3. In another terminal, run the dev server: `npm run dev`
-4. Open the printed URL (usually `http://localhost:5173`).
+4. Open the printed URL (`http://localhost:3000`).
 
 ## Scripts
 - `npm run dev` – start Vite dev server
