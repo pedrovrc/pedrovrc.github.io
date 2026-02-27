@@ -78,6 +78,7 @@
                         {
                             "title": "Bacharelado em Engenharia de Computação",
                             "institution": "Universidade de Brasília (UnB)",
+                            "location": "Brasília/DF, Brasil",
                             "period": "2017/08 - 2024/12",
                             "comment": "Trabalho de Conclusão publicado no 23º Simpósio Brasileiro de Qualidade de Software (SBQS 2024).",
                             "linkText": "Artigo: Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution",
@@ -92,7 +93,7 @@
                         {
                             "title": "Estagiário de Suporte de TI",
                             "company": "Polícia Federal",
-                            "location": "Sede - Brasília/DF",
+                            "location": "Sede - Brasília/DF, Brasil",
                             "period": "2021/12 - 2022/12",
                             "description": [
                                 "Realizei manutenção preventiva e corretiva em computadores e notebooks;",
@@ -235,6 +236,7 @@
                         {
                             "title": "Bachelor's Degree in Computer Engineering",
                             "institution": "University of Brasília (UnB)",
+                            "location": "Brasília/DF, Brazil",
                             "period": "2017/08 - 2024/12",
                             "comment": "Thesis published in the 23rd Brazilian Symposium on Software Quality (SBQS 2024).",
                             "linkText": "Paper: Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution",
@@ -249,7 +251,7 @@
                         {
                             "title": "IT Support Intern",
                             "company": "Brazilian Federal Police",
-                            "location": "Headquarters - Brasília/DF",
+                            "location": "Headquarters - Brasília/DF, Brazil",
                             "period": "2021/12 - 2022/12",
                             "description": [
                                 "Performed preventive and corrective maintenance on computers and laptops;",

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import Spinner from '../components/Spinner';
+import TitledCard from '../components/TitledCard';
+import ExperienceCard from '../components/ExperienceCard';
 
 const Curriculum = () => {
   const DATA_URL = 'http://localhost:8000/text';
@@ -78,18 +80,7 @@ const Curriculum = () => {
           <h3 className="text-2xl font-semibold mb-4">{skills?.programlangs?.title}</h3>
           <div className="grid gap-4 md:grid-cols-3">
             {programLanguages.map(({ title, bullets }) => (
-              <div key={title} className="rounded-lg border border-indigo-100 shadow-sm overflow-hidden">
-                <div className="bg-indigo-500 px-4 py-3">
-                  <h4 className="font-semibold text-white ml-2">{title}</h4>
-                </div>
-                <div className="bg-white px-4 py-3">
-                  <ul className="list-disc list-inside text-base text-gray-800 ml-2 mb-2">
-                    {bullets.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <TitledCard title={title} contentType='bulletList' content={bullets}/>
             ))}
           </div>
         </article>
@@ -136,18 +127,16 @@ const Curriculum = () => {
       <section className="mb-12  mr-12 ml-12">
         <h2 className="text-3xl font-bold text-center mb-6">{background?.title}</h2>
         <div className="space-y-6">
-          {background?.degrees?.map(({ title, institution, period, comment, linkText, link }) => (
-            <article key={title} className="rounded-lg border border-indigo-100 shadow-sm overflow-hidden leading-none">
-              <div className="bg-indigo-500 px-5 py-4">
-                <h3 className="text-2xl font-semibold text-white ml-2">{title}</h3>
-              </div>
-              <div className="bg-white px-5 py-4 ml-2 mr-4 mb-2 text-justify">
-                <p className="text-base text-gray-700 font-semibold">{institution}</p>
-                <p className="text-sm text-gray-500 mb-3">{period}</p>
-                {comment && <p className="text-base text-gray-700">{comment}</p>}
-                <a className="text-sm font-semibold text-indigo-500 hover:text-fuchsia-400 underline" href={link} target="_blank" rel="noopener noreferrer">{linkText}</a>
-              </div>
-            </article>
+          {background?.degrees?.map(({ title, institution, location, period, comment, linkText, link }) => (
+            <ExperienceCard
+              title={title}
+              company={institution}
+              location={location}
+              period={period}
+              description={comment}
+              linkText={linkText}
+              link={link}
+            />
           ))}
         </div>
       </section>
@@ -160,20 +149,14 @@ const Curriculum = () => {
         )}
         <div className="space-y-6">
           {experience?.jobs?.map(({ title, company, location, period, description }) => (
-            <article key={`${title}-${company}`} className="rounded-lg border border-indigo-100 shadow-sm overflow-hidden">
-              <div className="bg-indigo-500 px-5 py-4">
-                <h3 className="text-2xl font-semibold text-white ml-2">{title}</h3>
-              </div>
-              <div className="bg-white px-5 py-4">
-                <p className="text-base text-gray-700 font-semibold ml-2">{company}</p>
-                <p className="text-sm text-gray-500 mb-3 ml-2">{location} • {period}</p>
-                <ul className="list-disc list-inside text-base text-gray-700 text-justify ml-2 mr-6 mb-2">
-                  {description.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
+            <ExperienceCard
+              title={title}
+              company={company}
+              location={location}
+              period={period}
+              description={description}
+              contentType='bulletList'
+            />
           ))}
         </div>
       </section>
