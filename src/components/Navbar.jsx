@@ -67,19 +67,19 @@ const Navbar = ({ className = '' }) => {
                                     to="/projects"
                                     className={linkClass}
                                 >
-                                    Projects
+                                    {lang === 'pt' ? 'Projetos' : 'Projects'}
                                 </NavLink>
                                 <NavLink
                                     to="/contact"
                                     className={linkClass}
                                 >
-                                    Contact
+                                    {lang === 'pt' ? 'Contato' : 'Contact'}
                                 </NavLink>
                                 <NavLink
                                     to="/about"
                                     className={linkClass}
                                 >
-                                    About
+                                    {lang === 'pt' ? 'Sobre mim' : 'About me'}
                                 </NavLink>
                                 <LangMenu buttonClass={`${baseLinkClass}`} />
                             </div>

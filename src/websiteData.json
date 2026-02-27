@@ -155,7 +155,8 @@
                             "value": "Estou buscando iniciar minha carreira com o pé direito, e estou aberto a oportunidades que me permitam crescer e contribuir. Entre em contato!"
                         }
                     ]
-                ]
+                ],
+                "pictureSubtitle": "Uma foto de um lindo céu em um lugar próximo à minha cidade, Brasília."
             }
         },
         "en": {
@@ -313,12 +314,13 @@
                             "value": "I am looking to start my career on the right foot, and I am open to opportunities that allow me to grow and contribute. Get in touch!"
                         }
                     ]                   
-                ]
+                ],
+                "pictureSubtitle": "A picture of a beautiful sky in a place near my home city, Brasília."
             }
         }
     },
     "contactInfo": {
-        "titleEN": "Contact info",
+        "titleEN": "Contact",
         "titlePT": "Contato",
         "email": "pedrovrc.dev@gmail.com",
         "linkedin": "linkedin.com/in/pedrovrc-dev",

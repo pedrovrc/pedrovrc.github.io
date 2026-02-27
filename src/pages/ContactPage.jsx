@@ -1,14 +1,15 @@
 import React from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { useState, useEffect } from 'react';
+import ContactForm from '../components/ContactForm';
 
 const ContactPage = () => {
   const DATA_URL = 'http://localhost:8000/contactInfo'
   const { lang } = useLanguage()
 
   const defaultContact = {
-    titleEN: 'Contact info',
-    titlePT: 'Contato',
+    titleEN: 'Contact me',
+    titlePT: 'Contate-me',
     email: '',
     linkedin: '',
     github: '',
@@ -51,8 +52,15 @@ const ContactPage = () => {
 
   return (
     <section>
-      <h1 className="text-3xl font-bold text-center mt-8 mb-12 mr-12 ml-12">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
-      <div className="grid gap-4 md:grid-cols-2 max-w-140 mx-auto">
+      <h1 className="text-3xl font-bold text-center mt-8 mb-6 mr-12 ml-12">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
+
+      <div className="bg-indigo-500 mb-8 max-w-140 mx-auto rounded-md">
+        <ContactForm />
+      </div>
+
+      <h2 className="text-center text-xl mt-4 mb-4 font-semibold">Or reach out through these links:</h2>
+
+      <div className="grid gap-4 md:grid-cols-2 max-w-140 mx-auto mb-12">
         {[{
           label: 'Email',
           value: contactInfo.email,
@@ -85,6 +93,7 @@ const ContactPage = () => {
             </div>
           </a>
         ))}
+        
       </div>
     </section>
   )

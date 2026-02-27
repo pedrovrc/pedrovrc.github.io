@@ -48,7 +48,7 @@ const AboutPage = () => {
 
   if (status === 'error') return <p>Could not load About section.</p>;
 
-  const { title, mainText } = aboutData;
+  const { title, mainText, pictureSubtitle } = aboutData;
 
   const renderChunk = (chunk, key) =>
     chunk.type === 'link' ? (
@@ -79,6 +79,7 @@ const AboutPage = () => {
         );
       })}
       <img className="rounded-md shadow-sm mt-6" src={skypic} alt="A beautiful sky picture" />
+      <p className="text-sm italic text-black/50 text-right">{pictureSubtitle}</p>
     </section>
   )
 }
