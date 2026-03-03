@@ -66,7 +66,7 @@ const AboutPage = () => {
     );
 
   return (
-    <section className="relative max-w-5xl mx-auto ml-12 mr-12 px-4 py-12 text-lg text-gray-800 text-justify">
+    <section className="relative max-w-5xl mx-auto px-16 py-12 text-lg text-gray-800 text-justify">
       <h1 className="text-center font-semibold mb-6 text-4xl">{title}</h1>
       {mainText.map((paragraph, paragraphIdx) => {
         const chunks = Array.isArray(paragraph) ? paragraph : [paragraph];

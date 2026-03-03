@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import photo from '../assets/images/foto.jpg'
 import { useLanguage } from '../context/LanguageContext'
 import Spinner from './Spinner'
@@ -70,6 +72,46 @@ const Hero = () => {
                     <p className="my-4 text-xl text-white">
                         {subtitle}
                     </p>
+                    <div className="flex justify-center gap-4 mt-8 mb-4">
+                        <Link
+                            to="/projects"
+                            className="bg-white text-indigo-700 font-semibold px-5 py-2 rounded-lg hover:bg-indigo-50 transition"
+                        >
+                            {lang === 'en' ? 'View Projects' : 'Ver Projetos'}
+                        </Link>
+                        <Link
+                            to="/cv"
+                            className="border border-white text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-600 transition"
+                        >
+                            {lang === 'en' ? 'CV' : 'Currículo'}
+                        </Link>
+                        <Link
+                            to="/about"
+                            className="border border-white text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-600 transition"
+                        >
+                            {lang === 'en' ? 'About Me' : 'Sobre Mim'}
+                        </Link>
+                    </div>
+                    <div className="flex justify-center gap-5 mt-2">
+                        <a
+                            href="https://github.com/pedrovrc"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-indigo-200 transition"
+                            aria-label="GitHub"
+                        >
+                            <FaGithub size={28} />
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/pedrovrc-dev"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-indigo-200 transition"
+                            aria-label="LinkedIn"
+                        >
+                            <FaLinkedin size={28} />
+                        </a>
+                    </div>
                     {isRefetching && (
                         <div className="absolute inset-0 flex items-center justify-center bg-indigo-700/50">
                             <Spinner />

@@ -1,13 +1,13 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import ProjectListings from '../components/ProjectListings';
+import SkillsSection from '../components/SkillsSection'
 
 const HomePage = () => {
     return (
-        <>
+        <section className='bg-blue-50'>
             <Hero />
-            <ProjectListings isHome={true}/>
-        </>
+            <SkillsSection />
+        </section>
     )
 };
 

@@ -58,7 +58,7 @@ const ContactPage = () => {
         <ContactForm />
       </div>
 
-      <h2 className="text-center text-xl mt-4 mb-4 font-semibold">Or reach out through these links:</h2>
+      <h2 className="text-center text-xl mt-4 mb-4 font-semibold">{ lang === 'en' ? 'Or reach out through these links:' : 'Ou entre em contato por esses links:'}</h2>
 
       <div className="grid gap-4 md:grid-cols-2 max-w-140 mx-auto mb-12">
         {[{

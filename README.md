@@ -36,5 +36,5 @@ All strings live in [src/websiteData.json](src/websiteData.json). Each language 
 Outside the language blocks there’s a `contactInfo` object (email, LinkedIn, GitHub) that will back the Contact page when it’s implemented.
 
 ## Next Steps
-1. Finish BrowseProjects and Contact pages.
+1. Finish the Contact Form.
 2. Hook the site to a real back end (or CMS) and retire the mock API.
