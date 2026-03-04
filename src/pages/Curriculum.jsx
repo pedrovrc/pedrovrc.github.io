@@ -68,9 +68,19 @@ const Curriculum = () => {
         </div>
       )}
       {/* INTRODUCTION */}
-      <section className="text-justify mb-12 mr-12 ml-12">
+      <section className="text-justify mb-8 mr-12 ml-12">
         <p className="mb-4">{opening}</p>
         <p>{jobseek}</p>
+        <div className="flex justify-end mt-2">
+          <a
+            href={lang === 'en' ? 'https://flowcv.com/resume/83n68qpal3r3' : 'https://flowcv.com/resume/4ear5oome000'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-indigo-500 text-white hover:underline font-semibold px-5 py-2 rounded-lg hover:bg-indigo-200 hover:text-indigo-500 transition"
+          >
+            {lang === 'en' ? 'View Résumé PDF' : 'Ver Currículo em PDF'}
+          </a>
+        </div>
       </section>
 
       <section className="mb-12 mr-12 ml-12">

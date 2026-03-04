@@ -52,13 +52,13 @@ const ContactPage = () => {
 
   return (
     <section>
-      <h1 className="text-3xl font-bold text-center mt-8 mb-6 mr-12 ml-12">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
+      <h1 className="text-3xl font-bold text-indigo-500 mt-8 mb-2 text-center">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
 
-      <div className="bg-indigo-500 mb-8 max-w-140 mx-auto rounded-md">
+      <div className="bg-indigo-500 mt-4 mb-8 max-w-140 mx-auto rounded-md">
         <ContactForm />
       </div>
 
-      <h2 className="text-center text-xl mt-4 mb-4 font-semibold">{ lang === 'en' ? 'Or reach out through these links:' : 'Ou entre em contato por esses links:'}</h2>
+      <h2 className="text-2xl font-semibold text-indigo-500 mt-4 mb-2 text-center">{ lang === 'en' ? 'Or reach out through these links:' : 'Ou entre em contato por esses links:'}</h2>
 
       <div className="grid gap-4 md:grid-cols-2 max-w-140 mx-auto mb-12">
         {[{
