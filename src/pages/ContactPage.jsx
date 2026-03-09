@@ -51,8 +51,8 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <section>
-      <h1 className="text-3xl font-bold text-indigo-500 mt-8 mb-2 text-center">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
+    <section className="relative max-w-5xl mx-auto px-16 py-8 text-lg text-gray-800 text-justify">
+      <h1 className="text-3xl font-bold text-indigo-500 mb-2 text-center">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
 
       <div className="bg-indigo-500 mt-4 mb-8 max-w-140 mx-auto rounded-md">
         <ContactForm />

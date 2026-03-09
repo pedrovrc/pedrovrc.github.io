@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import Spinner from '../components/Spinner';
 import TitledCard from '../components/TitledCard';
 import ExperienceCard from '../components/ExperienceCard';
+import { LuExternalLink  } from 'react-icons/lu';
 
 const Curriculum = () => {
   const DATA_URL = 'http://localhost:8000/text';
@@ -61,14 +62,14 @@ const Curriculum = () => {
     : [];
 
   return (
-    <section className="relative max-w-5xl mx-auto px-4 py-12 text-lg text-gray-800">
+    <section className="relative max-w-5xl mx-auto px-12 lg:px-2 py-12 text-lg text-gray-800">
       {isRefetching && (
         <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-white/60">
           <Spinner />
         </div>
       )}
       {/* INTRODUCTION */}
-      <section className="text-justify mb-8 mr-12 ml-12">
+      <section className="text-justify mb-8">
         <p className="mb-4">{opening}</p>
         <p>{jobseek}</p>
         <div className="flex justify-end mt-2">
@@ -76,14 +77,14 @@ const Curriculum = () => {
             href={lang === 'en' ? 'https://flowcv.com/resume/83n68qpal3r3' : 'https://flowcv.com/resume/4ear5oome000'}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-indigo-500 text-white hover:underline font-semibold px-5 py-2 rounded-lg hover:bg-indigo-200 hover:text-indigo-500 transition"
+            className="inline-flex items-center gap-2 bg-indigo-500 text-white hover:underline font-semibold px-5 py-2 rounded-lg hover:bg-indigo-200 hover:text-indigo-500 transition"
           >
-            {lang === 'en' ? 'View Résumé PDF' : 'Ver Currículo em PDF'}
+            {lang === 'en' ? 'View Résumé PDF' : 'Ver Currículo em PDF'} <LuExternalLink />
           </a>
         </div>
       </section>
 
-      <section className="mb-12 mr-12 ml-12">
+      <section className="mb-12">
         <h2 className="text-3xl font-bold text-center mb-2">{skills?.title}</h2>
         {/* PROGRAMMING LANGUAGES */}
         <article className="mb-8">
@@ -134,7 +135,7 @@ const Curriculum = () => {
       </section>
 
       {/* ACADEMIC BACKGROUND */}
-      <section className="mb-12  mr-12 ml-12">
+      <section className="mb-12">
         <h2 className="text-3xl font-bold text-center mb-6">{background?.title}</h2>
         <div className="space-y-6">
           {background?.degrees?.map(({ title, institution, location, period, comment, linkText, link }) => (
@@ -152,7 +153,7 @@ const Curriculum = () => {
       </section>
 
       {/* PROFESSIONAL EXPERIENCE */}
-      <section className="mr-12 ml-12">
+      <section className="">
         <h2 className="text-3xl font-bold text-center mb-1">{experience?.title}</h2>
         {experience?.comment && (
           <p className="mb-6 text-center text-base text-gray-600">{experience.comment}</p>

@@ -6,8 +6,8 @@ const BrowseProjects = () => {
   const { lang } = useLanguage();
 
   return (
-    <section className="bg-blue-50 px-4 py-6">
-      <h2 className="text-3xl font-bold text-indigo-500 mt-4 mb-2 text-center">
+    <section className="bg-blue-50 px-16 py-8">
+      <h2 className="text-3xl font-bold text-indigo-500 mb-2 text-center">
         {lang === 'en' ? 'Browse Projects' : 'Ver Projetos'}
       </h2>
       <p className= 'text-center text-lg text-gray-800'>

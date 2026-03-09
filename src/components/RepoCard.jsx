@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar, FaCodeBranch } from 'react-icons/fa';
+import { LuExternalLink  } from 'react-icons/lu';
 import { useLanguage } from '../context/LanguageContext';
 
 const RepoCard = ({ repo }) => {
@@ -45,9 +46,9 @@ const RepoCard = ({ repo }) => {
                         href={repo.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="h-9 bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
+                        className="inline-flex items-center gap-1 bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                     >
-                        {lang === 'en' ? 'View on GitHub' : 'Ver no GitHub'}
+                        {lang === 'en' ? 'View on GitHub' : 'Ver no GitHub'} <LuExternalLink />
                     </a>
                 </div>
             </div>

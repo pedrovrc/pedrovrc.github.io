@@ -32,7 +32,7 @@ const IconGrid = ({ items }) => (
 );
 
 const Card = ({ title, children }) => (
-    <div className="rounded-lg max-w-60 border border-indigo-100 shadow-sm overflow-hidden flex flex-col">
+    <div className="rounded-lg w-full border border-indigo-100 shadow-sm overflow-hidden flex flex-col">
         <div className="bg-indigo-500 px-4 py-3">
             <h4 className="font-semibold text-2xl text-white text-center">{title}</h4>
         </div>
@@ -48,7 +48,7 @@ const SkillsSection = () => {
     return (
         <section className="px-4 py-10">
             <div className="container-xl lg:container mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto px-24 md:px-0">
                     <Card title="Stack">
                         <IconGrid items={STACK} />
                     </Card>

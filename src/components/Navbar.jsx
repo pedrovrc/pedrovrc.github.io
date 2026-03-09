@@ -50,7 +50,7 @@ const Navbar = ({ className = '' }) => {
                             </span>
                         </NavLink>
                         <div className="md:ml-auto">
-                            <div className="flex space-x-2">
+                            <div className="flex space-x-2 text-center content-center">
                                 <NavLink
                                     to="/"
                                     className={linkClass}

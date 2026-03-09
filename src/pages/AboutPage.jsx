@@ -9,6 +9,7 @@ const AboutPage = () => {
   const { lang } = useLanguage();
   const [aboutData, setAboutData] = useState(null);
   const [status, setStatus] = useState('loading'); // loading | ready | error
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -67,7 +68,7 @@ const AboutPage = () => {
 
   return (
     <section className="relative max-w-5xl mx-auto px-16 py-8 text-lg text-gray-800 text-justify">
-      <h1 className="text-4xl font-semibold text-indigo-500 mb-4 text-center">{title}</h1>
+      <h1 className="text-3xl font-bold text-indigo-500 mb-2 text-center">{title}</h1>
       {mainText.map((paragraph, paragraphIdx) => {
         const chunks = Array.isArray(paragraph) ? paragraph : [paragraph];
         return (
@@ -78,8 +79,15 @@ const AboutPage = () => {
           </p>
         );
       })}
-      <img className="rounded-md shadow-sm mt-6" src={skypic} alt="A beautiful sky picture" />
-      <p className="text-sm italic text-black/50 text-right">{pictureSubtitle}</p>
+      {!imgLoaded && <Spinner loading={true} />}
+      <img
+        className="rounded-md shadow-sm mt-6"
+        src={skypic}
+        alt="A beautiful sky picture"
+        onLoad={() => setImgLoaded(true)}
+        style={!imgLoaded ? { display: 'none' } : {}}
+      />
+      {imgLoaded && <p className="text-sm italic text-black/50 text-right">{pictureSubtitle}</p>}
     </section>
   )
 }
