@@ -2,6 +2,7 @@ import React from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { useState, useEffect } from 'react';
 import ContactForm from '../components/ContactForm';
+import { LuExternalLink  } from 'react-icons/lu';
 
 const ContactPage = () => {
   const DATA_URL = 'http://localhost:8000/contactInfo'
@@ -54,13 +55,13 @@ const ContactPage = () => {
     <section className="relative max-w-5xl mx-auto px-16 py-8 text-lg text-gray-800 text-justify">
       <h1 className="text-3xl font-bold text-indigo-500 mb-2 text-center">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
 
-      <div className="bg-indigo-500 mt-4 mb-8 max-w-140 mx-auto rounded-md">
+      <div className="bg-indigo-500 mt-4 mb-8 max-w-150 mx-auto rounded-md shadow-sm">
         <ContactForm />
       </div>
 
       <h2 className="text-2xl font-semibold text-indigo-500 mt-4 mb-2 text-center">{ lang === 'en' ? 'Or reach out through these links:' : 'Ou entre em contato por esses links:'}</h2>
 
-      <div className="grid gap-4 md:grid-cols-2 max-w-140 mx-auto mb-12">
+      <div className="grid gap-4 md:grid-cols-2 max-w-150 mx-auto mb-12">
         {[{
           label: 'Email',
           value: contactInfo.email,
@@ -86,9 +87,9 @@ const ContactPage = () => {
             className={`group rounded-lg border border-indigo-100 shadow-sm overflow-hidden transition transform hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 ${href ? 'cursor-pointer' : 'pointer-events-none opacity-75'}`}
           >
             <div className="bg-indigo-500 px-2 py-2 transition-colors duration-150 group-hover:bg-fuchsia-400">
-              <p className="text-white font-semibold text-center tracking-wide text-xl">{label}</p>
+              <p className="flex items-center justify-center gap-2 text-white font-semibold tracking-wide text-xl">{label} <LuExternalLink /></p>
             </div>
-            <div className="bg-white px-4 py-4">
+            <div className="bg-white px-2 py-2">
               <p className="text-center text-gray-800 wrap-break-word group-hover:text-indigo-800 group-hover:underline group-hover:font-semibold">{value || '—'}</p>
             </div>
           </a>

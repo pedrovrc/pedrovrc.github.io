@@ -83,7 +83,7 @@ const ContactForm = () => {
             </label>
             <button
                 type="submit"
-                className="self-end rounded-md bg-fuchsia-300 px-6 py-2 text-sm font-semibold uppercase tracking-wide text-indigo-800 transition hover:bg-fuchsia-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-fuchsia-300"
+                className="self-end rounded-md bg-fuchsia-300 px-6 py-2 text-sm shadow-sm font-semibold uppercase tracking-wide text-indigo-800 transition hover:bg-fuchsia-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-fuchsia-300 hover:shadow-md"
             >
                 {lang === 'pt' ? 'Enviar Formulário' : 'Send Form'}
             </button>

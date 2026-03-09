@@ -58,7 +58,7 @@ const Hero = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
                 <div className="text-center relative">
                     <img
-                        className="w-40 rounded-full mx-auto border-2 border-fuchsia-400"
+                        className="w-40 rounded-full mx-auto border-2 border-fuchsia-300"
                         src={photo}
                         alt="Profile picture"
                     />

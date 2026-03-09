@@ -125,7 +125,7 @@ const Curriculum = () => {
           <h3 className="text-2xl font-semibold mb-4">{skills?.languages?.title}</h3>
           <div className="grid gap-4 md:grid-cols-3">
             {spokenLanguages.map(({ name, level }) => (
-              <div key={name} className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+              <div key={name} className="rounded-lg border border-gray-200 bg-white px-6 py-4 shadow-sm">
                 <p className="font-semibold">{name}</p>
                 <p className="text-sm text-gray-600">{level}</p>
               </div>
