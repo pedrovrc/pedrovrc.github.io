@@ -62,7 +62,7 @@ const Curriculum = () => {
     : [];
 
   return (
-    <section className="relative max-w-5xl mx-auto px-12 lg:px-2 py-12 text-lg text-gray-800">
+    <section className="relative max-w-5xl mx-auto px-16 py-12 text-lg text-gray-800">
       {isRefetching && (
         <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-white/60">
           <Spinner />
@@ -111,9 +111,9 @@ const Curriculum = () => {
         {/* INTERESTS */}
         <article className="mb-8">
           <h3 className="text-2xl font-semibold mb-4">{skills?.interests?.title}</h3>
-          <div className="flex gap-3">
+          <div className="grid gap-3 md:grid-cols-3">
             {skills?.interests?.bullets?.map((interest) => (
-              <span key={interest} className="rounded-full bg-indigo-100 px-4 py-1 text-1xl font-medium text-indigo-700 text-center flex items-center justify-center">
+              <span key={interest} className="max-w-2xl min-h-12 rounded-full bg-indigo-100 px-4 py-1 text-1xl font-medium text-indigo-700 text-center flex items-center justify-center">
                 {interest}
               </span>
             ))}

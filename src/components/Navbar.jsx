@@ -79,7 +79,7 @@ const Navbar = ({ className = '' }) => {
                                     to="/about"
                                     className={linkClass}
                                 >
-                                    {lang === 'pt' ? 'Sobre mim' : 'About me'}
+                                    {lang === 'pt' ? 'Sobre Mim' : 'About Me'}
                                 </NavLink>
                                 <LangMenu buttonClass={`${baseLinkClass}`} />
                             </div>

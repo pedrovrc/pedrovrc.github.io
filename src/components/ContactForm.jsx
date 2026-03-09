@@ -39,7 +39,7 @@ const ContactForm = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full rounded-md border border-white bg-white/90 px-3 py-2 text-black/90 placeholder:text-black/50 focus:border-fuchsia-400 focus:outline-none"
-                    placeholder={lang === 'pt' ? "João Silva" : "Jane Doe"}
+                    placeholder={lang === 'pt' ? "João Silva" : "John Smith"}
                 />
             </label>
             <label className="flex flex-col gap-2 text-left">

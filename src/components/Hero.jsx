@@ -81,7 +81,7 @@ const Hero = () => {
                             to="/cv"
                             className="border border-white text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-600 transition"
                         >
-                            {lang === 'en' ? 'CV' : 'Currículo'}
+                            {lang === 'en' ? 'Résumé' : 'Currículo'}
                         </Link>
                         <Link
                             to="/about"

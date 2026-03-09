@@ -7,6 +7,8 @@
             "cv": {
                 "opening": "Sou um desenvolvedor de software em início de carreira, com 4+ anos de experiência em C/C++ e Python em projetos da graduação. Concluí minha graduação em Engenharia de Computação no final de 2024 e, no último ano, tenho estudado desenvolvimento web, recentemente focando em desenvolvimento front-end com React e Tailwind. Também experimentei um pouco as funcionalidades de back-end usando Django e Flask.",
                 "jobseek": "Atualmente, estou buscando minha primeira oportunidade profissional na área. Estou disposto a contribuir como puder e aberto a aprender novas tecnologias para crescer como desenvolvedor.",
+                "cvlink": "https://flowcv.com/resume/4ear5oome000",
+                "linkname": "Ver Currículo em PDF",
                 "skills": {
                     "title": "Habilidades",
                     "programlangs": {
@@ -104,6 +106,10 @@
                     ]
                 }
             },
+            "projects": {
+                "title": "Ver Projetos",
+                "subtitle": "Estes são os meus projetos fixados no GitHub. Explore mais no meu perfil!"
+            },
             "about": {
                 "title": "Sobre mim",
                 "mainText": [
@@ -166,6 +172,8 @@
             "cv": {
                 "opening": "I'm an early-career software developer with 4+ years of experience in C/C++ and Python in undergrad projects. I've graduated in Computer Engineering at the end of 2024 and, over the last year, I've been studying web development, recently focusing on front-end development with React and Tailwind. I've also experimented a bit with back-end functionalities with Django and Flask.",
                 "jobseek": "I am currently seeking my first professional opportunity in the field. I am eager to contribute wherever I can and open to learning new technologies to grow as a developer.",
+                "cvlink": "https://flowcv.com/resume/83n68qpal3r3",
+                "linkname": "View Résumé PDF",
                 "skills": {
                     "title": "Skills",
                     "programlangs": {
@@ -263,6 +271,10 @@
                     ]
                 }
             },
+            "projects": {
+                "title": "Browse Projects",
+                "subtitle": "These are my pinned repos on GitHub. Feel free to browse more on my profile!"
+            },
             "about": {
                 "title": "About me",
                 "mainText": [
@@ -321,7 +333,9 @@
     },
     "contactInfo": {
         "titleEN": "Contact",
+        "underFormEN": "Or reach out through these links:",
         "titlePT": "Contato",
+        "underTitlePT": "Ou entre em contato por esses links:",
         "email": "pedrovrc.dev@gmail.com",
         "linkedin": "linkedin.com/in/pedrovrc-dev",
         "github": "github.com/pedrovrc",
