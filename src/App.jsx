@@ -5,7 +5,6 @@ import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import Curriculum from './pages/Curriculum'
 import BrowseProjects from './pages/BrowseProjects'
-import ProjectPage from './pages/Projectpage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -17,7 +16,6 @@ const App = () => {
         <Route index element={<HomePage />} />
         <Route path='/cv' element={<Curriculum />} />
         <Route path='/projects' element={<BrowseProjects />} />
-        <Route path='/projects/:id' element={<ProjectPage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/*' element={<NotFoundPage />} />

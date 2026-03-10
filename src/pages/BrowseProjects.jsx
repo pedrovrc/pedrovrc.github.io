@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectListings from '../components/ProjectListings'
+import ProjectListings from '../components/features/ProjectListings'
 import { useLanguage } from '../context/LanguageContext'
 
 const BrowseProjects = () => {

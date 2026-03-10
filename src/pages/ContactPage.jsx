@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { useState, useEffect } from 'react';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/features/ContactForm';
 import { LuExternalLink  } from 'react-icons/lu';
 
 const ContactPage = () => {
@@ -9,8 +9,8 @@ const ContactPage = () => {
   const { lang } = useLanguage()
 
   const defaultContact = {
-    titleEN: 'Contact me',
-    titlePT: 'Contate-me',
+    titleEN: 'Contact Form',
+    titlePT: 'Formulário de Contato',
     email: '',
     linkedin: '',
     github: '',

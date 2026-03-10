@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import Spinner from '../components/Spinner';
-import TitledCard from '../components/TitledCard';
-import ExperienceCard from '../components/ExperienceCard';
+import Spinner from '../components/ui/Spinner';
+import TitledCard from '../components/ui/TitledCard';
+import ExperienceCard from '../components/ui/ExperienceCard';
 import { LuExternalLink  } from 'react-icons/lu';
 
 const Curriculum = () => {

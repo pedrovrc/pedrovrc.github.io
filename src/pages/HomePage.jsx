@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import SkillsSection from '../components/SkillsSection'
+import Hero from '../components/features/Hero'
+import SkillsSection from '../components/features/SkillsSection'
 
 const HomePage = () => {
     return (

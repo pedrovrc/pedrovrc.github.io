@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import RepoCard from './RepoCard';
-import Spinner from './Spinner';
-import { fetchPinnedRepos } from '../services/githubService';
+import RepoCard from '../ui/RepoCard';
+import Spinner from '../ui/Spinner';
+import { fetchPinnedRepos } from '../../services/githubService';
 
 const ProjectListings = () => {
     const [repos, setRepos] = useState([]);

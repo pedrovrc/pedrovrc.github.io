@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import Spinner from '../components/Spinner';
+import Spinner from '../components/ui/Spinner';
 import skypic from '../assets/images/skypic.jpg';
 
 const AboutPage = () => {

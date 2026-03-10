@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaStar, FaCodeBranch } from 'react-icons/fa';
 import { LuExternalLink  } from 'react-icons/lu';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 const getContrastColor = (hex) => {
     const h = hex.replace('#', '');

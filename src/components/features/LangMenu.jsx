@@ -1,7 +1,7 @@
 import React from 'react'
 import { GiBrazilFlag } from "react-icons/gi";
 import { LiaFlagUsaSolid } from "react-icons/lia";
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../../context/LanguageContext'
 
 const LangMenu = ({ buttonClass = '' }) => {
     const { lang, toggleLang } = useLanguage();

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import photo from '../assets/images/foto.jpg'
-import { useLanguage } from '../context/LanguageContext'
-import Spinner from './Spinner'
+import photo from '../../assets/images/foto.jpg'
+import { useLanguage } from '../../context/LanguageContext'
+import Spinner from '../ui/Spinner'
 
 const DATA_URL = 'http://localhost:8000/text'
 
@@ -55,7 +55,7 @@ const Hero = () => {
 
     return (
         <section className="bg-indigo-700 py-12 px-4 mb-2">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 flex flex-col items-center">
                 <div className="text-center relative">
                     <img
                         className="w-40 rounded-full mx-auto border-2 border-fuchsia-300"

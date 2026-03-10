@@ -1,10 +1,12 @@
 import React from 'react';
 import {
-    SiJavascript, SiReact, SiPython, SiDjango, SiCplusplus, SiGit, SiGithub
+    SiJavascript, SiReact, SiPython, SiDjango, SiCplusplus, SiGit, SiGithub, SiDocker
 } from 'react-icons/si';
 import { DiVisualstudio } from 'react-icons/di'
-import websiteData from '../websiteData.json';
-import { useLanguage } from '../context/LanguageContext';
+import { GrMysql } from "react-icons/gr";
+import websiteData from '../../websiteData.json';
+import { useLanguage } from '../../context/LanguageContext';
+import HomeCard from '../ui/HomeCard';
 
 const STACK = [
     { icon: <SiJavascript size={40} color="#F7DF1E" />, label: 'JavaScript' },
@@ -18,6 +20,8 @@ const TOOLS = [
     { icon: <DiVisualstudio size={40} color="#007ACC" />, label: 'VS Code' },
     { icon: <SiGit size={40} color="#F05032" />, label: 'Git' },
     { icon: <SiGithub size={40} color="#181717" />, label: 'GitHub' },
+    { icon: <SiDocker size={40} color="#2496ED" />, label: 'Docker' },
+    { icon: <GrMysql size={40} color="#4479A1" />, label: 'MySQL' },
 ];
 
 const IconGrid = ({ items }) => (
@@ -31,15 +35,6 @@ const IconGrid = ({ items }) => (
     </div>
 );
 
-const Card = ({ title, children }) => (
-    <div className="rounded-lg w-full border border-indigo-100 shadow-sm overflow-hidden flex flex-col">
-        <div className="bg-indigo-500 px-4 py-3">
-            <h4 className="font-semibold text-2xl text-white text-center">{title}</h4>
-        </div>
-        <div className="bg-white px-4 py-4 flex-1 flex items-center justify-center">{children}</div>
-    </div>
-);
-
 const SkillsSection = () => {
     const { lang } = useLanguage();
     const skills = websiteData.text[lang].cv.skills;
@@ -49,19 +44,19 @@ const SkillsSection = () => {
         <section className="px-4 py-10">
             <div className="container-xl lg:container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto px-24 md:px-0">
-                    <Card title="Stack">
+                    <HomeCard title="Stack">
                         <IconGrid items={STACK} />
-                    </Card>
-                    <Card title="Tools">
+                    </HomeCard>
+                    <HomeCard title="Tools">
                         <IconGrid items={TOOLS} />
-                    </Card>
-                    <Card title={interests.title}>
+                    </HomeCard>
+                    <HomeCard title={interests.title}>
                         <ul className="list-disc list-inside text-base/8 text-gray-800">
                             {interests.bullets.map((item) => (
                                 <li key={item}>{item}</li>
                             ))}
                         </ul>
-                    </Card>
+                    </HomeCard>
                 </div>
             </div>
         </section>

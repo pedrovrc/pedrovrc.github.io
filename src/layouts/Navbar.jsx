@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import LangMenu from '../components/LangMenu'
+import LangMenu from '../components/features/LangMenu'
 import { useLanguage } from '../context/LanguageContext'
 
 const Navbar = ({ className = '' }) => {
@@ -32,8 +32,9 @@ const Navbar = ({ className = '' }) => {
         return () => controller.abort()
     }, [lang])
 
-    const baseLinkClass = 'flex items-center justify-center text-white hover:bg-fuchsia-400 hover:text-white rounded-full px-3 py-2 transition-colors duration-150';
-    const activeLinkClass = 'flex items-center justify-center bg-white text-indigo-900 font-semibold hover:bg-fuchsia-400/90 hover:text-white/90 rounded-full px-3 transition-colors duration-150';
+    const sharedLinkClass = 'flex items-center justify-center rounded-full px-3 py-2 transition-colors duration-150';
+    const baseLinkClass = `${sharedLinkClass} text-white hover:bg-fuchsia-400 hover:text-white`;
+    const activeLinkClass = `${sharedLinkClass} bg-white text-indigo-900 font-semibold hover:bg-fuchsia-400/90 hover:text-white/90`;
     const linkClass = ({ isActive }) => (isActive ? activeLinkClass : baseLinkClass);
 
     return (
@@ -81,7 +82,7 @@ const Navbar = ({ className = '' }) => {
                                 >
                                     {lang === 'pt' ? 'Sobre Mim' : 'About Me'}
                                 </NavLink>
-                                <LangMenu buttonClass={`${baseLinkClass}`} />
+                                <LangMenu buttonClass={baseLinkClass} />
                             </div>
                         </div>
                     </div>
