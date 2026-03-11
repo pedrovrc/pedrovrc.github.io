@@ -5,39 +5,34 @@
             "title": "Olá, eu sou Pedro Carvalho",
             "subtitle": "Sou um Web Dev em início de carreira. Bem-vindo(a) ao meu site!",
             "cv": {
-                "opening": "Sou um desenvolvedor de software em início de carreira, com 4+ anos de experiência em C/C++ e Python em projetos da graduação. Concluí minha graduação em Engenharia de Computação no final de 2024 e, no último ano, tenho estudado desenvolvimento web, recentemente focando em desenvolvimento front-end com React e Tailwind. Também experimentei um pouco as funcionalidades de back-end usando Django e Flask.",
-                "jobseek": "Atualmente, estou buscando minha primeira oportunidade profissional na área. Estou disposto a contribuir como puder e aberto a aprender novas tecnologias para crescer como desenvolvedor.",
+                "opening": "Desenvolvedor Web em início de carreira, focado na construção de aplicações com React e Tailwind. Combinando experiência com Python (4 anos em projetos de graduação) e prática crescente em JavaScript (~1 ano), meu foco atual é o ecossistema Front-End.",
+                "jobseek": "Sou um Desenvolvedor Júnior dedicado, em busca da minha primeira oportunidade profissional. Estou disposto a contribuir com a equipe e aberto a dominar novas tecnologias, buscando crescer como profissional, pessoa e desenvolvedor.",
                 "cvlink": "https://flowcv.com/resume/4ear5oome000",
                 "linkname": "Ver Currículo em PDF",
                 "skills": {
                     "title": "Habilidades",
                     "programlangs": {
                         "title": "Linguagens de Programação",
-                        "cpp": {
-                            "title": "C/C++",
-                            "bullets": [
-                                "Interface de Terminais",
-                                "Manejo de Memória",
-                                "Orientação a Objeto"
-                            ]
-                        },
                         "python": {
                             "title": "Python",
                             "bullets": [
                                 "Django",
-                                "Flask",
-                                "Pandas",
-                                "NumPy",
-                                "Scikit-learn",
-                                "OpenCV"
+                                "Flask"
                             ]
                         },
                         "javascript": {
                             "title": "JavaScript",
                             "bullets": [
                                 "React.js",
-                                "Node.js",
-                                "Vue.js"
+                                "Tailwind CSS",
+                                "Node.js"
+                            ]
+                        },
+                        "cpp": {
+                            "title": "C/C++",
+                            "bullets": [
+                                "Manejo de Memória",
+                                "Orientação a Objeto"
                             ]
                         }
                     },
@@ -82,7 +77,12 @@
                             "institution": "Universidade de Brasília (UnB)",
                             "location": "Brasília/DF, Brasil",
                             "period": "2017/08 - 2024/12",
-                            "comment": "Trabalho de Conclusão publicado no 23º Simpósio Brasileiro de Qualidade de Software (SBQS 2024).",
+                            "description": [
+                                "Desenvolvimento/Engenharia de Software (foco em C/C++ e Python);",
+                                "Arquitetura de Computadores;",
+                                "Sistemas Microprocessados;",
+                                "Trabalho de Conclusão publicado no 23º Simpósio Brasileiro de Qualidade de Software (SBQS 2024)."
+                            ],
                             "linkText": "Artigo: Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution",
                             "link": "https://dl.acm.org/doi/10.1145/3701625.3701665"
                         }
@@ -170,39 +170,34 @@
             "title": "Hello, I'm Pedro Carvalho",
             "subtitle": "I am an early-career web developer. Welcome to my website!",
             "cv": {
-                "opening": "I'm an early-career software developer with 4+ years of experience in C/C++ and Python in undergrad projects. I've graduated in Computer Engineering at the end of 2024 and, over the last year, I've been studying web development, recently focusing on front-end development with React and Tailwind. I've also experimented a bit with back-end functionalities with Django and Flask.",
-                "jobseek": "I am currently seeking my first professional opportunity in the field. I am eager to contribute wherever I can and open to learning new technologies to grow as a developer.",
+                "opening": "I'm an early-career web developer building modern applications with React and Tailwind. With a background in Python (4 years in undergrad projects) and growing expertise in JavaScript (~1 year), I am dedicated to creating high-quality Front-End solutions.",
+                "jobseek": "As a Junior Developer seeking my first professional role, I'm eager to contribute to a team and continuously learn new technologies to grow as a professional, a person and a developer.",
                 "cvlink": "https://flowcv.com/resume/83n68qpal3r3",
                 "linkname": "View Résumé PDF",
                 "skills": {
                     "title": "Skills",
                     "programlangs": {
                         "title": "Programming Languages",
-                        "cpp": {
-                            "title": "C/C++",
-                            "bullets": [
-                                "Terminal Interface",
-                                "Memory Management",
-                                "Object-Oriented Programming"
-                            ]
-                        },
                         "python": {
                             "title": "Python",
                             "bullets": [
                                 "Django",
-                                "Flask",
-                                "Pandas",
-                                "NumPy",
-                                "Scikit-learn",
-                                "OpenCV"
+                                "Flask"
                             ]
                         },
                         "javascript": {
                             "title": "JavaScript",
                             "bullets": [
                                 "React.js",
-                                "Node.js",
-                                "Vue.js"
+                                "Tailwind CSS",
+                                "Node.js"
+                            ]
+                        },
+                        "cpp": {
+                            "title": "C/C++",
+                            "bullets": [
+                                "Memory Management",
+                                "Object-Oriented Programming"
                             ]
                         }
                     },
@@ -247,7 +242,12 @@
                             "institution": "University of Brasília (UnB)",
                             "location": "Brasília/DF, Brazil",
                             "period": "2017/08 - 2024/12",
-                            "comment": "Thesis published in the 23rd Brazilian Symposium on Software Quality (SBQS 2024).",
+                            "description": [
+                                "Software Development & Engineering (focus on C/C++ & Python);",
+                                "Computer Architecture;",
+                                "Embedded Systems;",
+                                "Thesis published in the 23rd Brazilian Symposium on Software Quality (SBQS 2024)."
+                            ],
                             "linkText": "Paper: Mining Discussions on Software Migration: A study of the Boost mailing list regarding C++ code evolution",
                             "link": "https://dl.acm.org/doi/10.1145/3701625.3701665"
                         }

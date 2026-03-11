@@ -13,7 +13,6 @@ const STACK = [
     { icon: <SiReact size={40} color="#61DAFB" />, label: 'React' },
     { icon: <SiPython size={40} color="#3776AB" />, label: 'Python' },
     { icon: <SiDjango size={40} color="#092E20" />, label: 'Django' },
-    { icon: <SiCplusplus size={40} color="#00599C" />, label: 'C++' },
 ];
 
 const TOOLS = [

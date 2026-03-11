@@ -92,13 +92,14 @@ const Curriculum = () => {
       <section className="mb-12">
         <h2 className="text-3xl font-bold text-center mb-6">{background?.title}</h2>
         <div className="space-y-6">
-          {background?.degrees?.map(({ title, institution, location, period, comment, linkText, link }) => (
+          {background?.degrees?.map(({ title, institution, location, period, description, linkText, link }) => (
             <ExperienceCard
               title={title}
               company={institution}
               location={location}
               period={period}
-              description={comment}
+              description={description}
+              contentType='bulletList'
               linkText={linkText}
               link={link}
             />

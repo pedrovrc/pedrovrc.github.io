@@ -7,7 +7,7 @@ Personal portfolio site built with React and Tailwind CSS. Supports Portuguese a
 ## Features
 - **Bilingual** - Portuguese/English toggle via `LanguageContext`, all copy lives in `websiteData.json`
 - **CV page** - skills, background, and experience rendered from JSON data
-- **Projects page** - fetches pinned repositories from the GitHub GraphQL API
+- **Projects page** - fetches repositories from the GitHub REST API
 - **Contact form** - wired to [Formspree](https://formspree.io) with toast notifications
 - **Deployed** via `npm run deploy` (builds with Vite, pushes `dist/` to the `gh-pages` branch)
 
@@ -16,11 +16,12 @@ Personal portfolio site built with React and Tailwind CSS. Supports Portuguese a
 - Tailwind CSS 4
 - Vite
 - Formspree (contact form)
-- GitHub Actions (CI/CD)
 
 ## Project Structure
 ```
 src/
++-- assets/
+    +-- images/
 +-- components/
     +-- features/   # Stateful, domain-specific components
     +-- ui/         # Generic, presentational components
@@ -28,4 +29,5 @@ src/
 +-- layouts/        # Navbar, MainLayout
 +-- pages/          # Route-level page components
 +-- services/       # GitHub API calls
++-- websiteData.json  # All bilingual copy (PT/EN)
 ```
