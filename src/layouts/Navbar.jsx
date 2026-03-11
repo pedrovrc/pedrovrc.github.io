@@ -1,36 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import LangMenu from '../components/features/LangMenu'
 import { useLanguage } from '../context/LanguageContext'
+import websiteData from '../websiteData.json'
 
 const Navbar = ({ className = '' }) => {
-    const DATA_URL = 'http://localhost:8000/text'
     const { lang } = useLanguage()
-    const [navTitle, setNavTitle] = useState('Pedro\'s Portfolio')
-    const [status, setStatus] = useState('idle')
-
-    useEffect(() => {
-        const controller = new AbortController()
-
-        const fetchNavTitle = async () => {
-            try {
-                setStatus('loading')
-                const res = await fetch(DATA_URL, { signal: controller.signal })
-                if (!res.ok) throw new Error('Failed to load nav title')
-                const data = await res.json()
-                setNavTitle(data[lang]?.navTitle || "Pedro's Portfolio")
-                setStatus('ready')
-            } catch (err) {
-                if (err.name === 'AbortError') return
-                console.error(err)
-                setStatus('error')
-            }
-        }
-
-        fetchNavTitle()
-
-        return () => controller.abort()
-    }, [lang])
+    const navTitle = websiteData.text[lang]?.navTitle || "Pedro's Portfolio"
 
     const sharedLinkClass = 'flex items-center justify-center rounded-full px-3 py-2 transition-colors duration-150';
     const baseLinkClass = `${sharedLinkClass} text-white hover:bg-fuchsia-400 hover:text-white`;
@@ -47,7 +23,7 @@ const Navbar = ({ className = '' }) => {
                         <NavLink className="flex shrink-0 items-center mr-4" to="/">
                             <span className="hidden md:block text-white text-2xl font-bold ml-2"
                             >
-                                {status === 'error' ? "Pedro's Portfolio" : navTitle}
+                                {navTitle}
                             </span>
                         </NavLink>
                         <div className="md:ml-auto">

@@ -1,55 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import Spinner from '../components/ui/Spinner';
 import TitledCard from '../components/ui/TitledCard';
 import ExperienceCard from '../components/ui/ExperienceCard';
 import { LuExternalLink  } from 'react-icons/lu';
+import websiteData from '../websiteData.json';
 
 const Curriculum = () => {
-  const DATA_URL = 'http://localhost:8000/text';
   const { lang } = useLanguage();
-  const [cvData, setCvData] = useState(null);
-  const [status, setStatus] = useState('loading'); // loading | ready | error
 
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadCvCopy = async () => {
-      try {
-        setStatus('loading');
-        const res = await fetch(DATA_URL, { signal: controller.signal });
-        if (!res.ok) throw new Error('Failed to fetch CV copy');
-        const data = await res.json();
-        setCvData(data[lang].cv);
-        setStatus('ready');
-      } catch (err) {
-        if (err.name === 'AbortError') return;
-        console.error(err);
-        setStatus('error');
-      }
-    };
-
-    loadCvCopy();
-
-    return () => controller.abort();
-  }, [lang]);
-
-  const isInitialLoading = status === 'loading' && !cvData;
-  const isRefetching = status === 'loading' && !!cvData;
-
-  if (isInitialLoading) {
-    return (
-      <section className="max-w-5xl mx-auto px-4 py-12">
-        <div className="flex justify-center">
-          <Spinner />
-        </div>
-      </section>
-    );
-  }
-
-  if (status === 'error') return <p>Could not load CV text.</p>;
-
-  const { opening, jobseek, skills, background, experience } = cvData;
+  const { opening, jobseek, skills, background, experience } = websiteData.text[lang].cv;
   const programLanguages = skills?.programlangs
     ? Object.entries(skills.programlangs)
       .filter(([key]) => key !== 'title')
@@ -63,11 +22,6 @@ const Curriculum = () => {
 
   return (
     <section className="relative max-w-5xl mx-auto px-16 py-12 text-lg text-gray-800">
-      {isRefetching && (
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center bg-white/60">
-          <Spinner />
-        </div>
-      )}
       {/* INTRODUCTION */}
       <section className="text-justify mb-8">
         <p className="mb-4">{opening}</p>

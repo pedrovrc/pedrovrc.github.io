@@ -1,55 +1,12 @@
 import React from 'react'
 import { useLanguage } from '../context/LanguageContext'
-import { useState, useEffect } from 'react';
 import ContactForm from '../components/features/ContactForm';
 import { LuExternalLink  } from 'react-icons/lu';
+import websiteData from '../websiteData.json';
 
 const ContactPage = () => {
-  const DATA_URL = 'http://localhost:8000/contactInfo'
   const { lang } = useLanguage()
-
-  const defaultContact = {
-    titleEN: 'Contact Form',
-    titlePT: 'Formulário de Contato',
-    email: '',
-    linkedin: '',
-    github: '',
-    carrd: ''
-  };
-
-  const [contactInfo, setContactInfo] = useState(defaultContact)
-  const [status, setStatus] = useState('idle')
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const fetchContactInfo = async () => {
-  try {
-    setStatus('loading');
-    const res = await fetch(DATA_URL, { signal: controller.signal });
-    if (!res.ok) throw new Error('Failed to load contact info');
-    const data = await res.json();
-    setContactInfo({
-      titleEN: data.titleEN ?? defaultContact.titleEN,
-      titlePT: data.titlePT ?? defaultContact.titlePT,
-      email: data.email ?? defaultContact.email,
-      linkedin: data.linkedin ?? defaultContact.linkedin,
-      github: data.github ?? defaultContact.github,
-      carrd: data.carrd ?? defaultContact.carrd,
-    });
-    setStatus('ready');
-  } catch (err) {
-    if (err.name !== 'AbortError') {
-      console.error(err);
-      setStatus('error');
-      setContactInfo(defaultContact);
-    }
-  }
-};
-
-    fetchContactInfo();
-    return () => controller.abort();
-  }, []);
+  const contactInfo = websiteData.contactInfo;
 
   return (
     <section className="relative max-w-5xl mx-auto px-16 py-8 text-lg text-gray-800 text-justify">

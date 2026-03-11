@@ -1,55 +1,14 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react'
 import { useLanguage } from '../context/LanguageContext';
 import Spinner from '../components/ui/Spinner';
 import skypic from '../assets/images/skypic.jpg';
+import websiteData from '../websiteData.json';
 
 const AboutPage = () => {
-  const DATA_URL = 'http://localhost:8000/text';
   const { lang } = useLanguage();
-  const [aboutData, setAboutData] = useState(null);
-  const [status, setStatus] = useState('loading'); // loading | ready | error
   const [imgLoaded, setImgLoaded] = useState(false);
 
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const loadAboutCopy = async () => {
-      try {
-        setStatus('loading');
-        const res = await fetch(DATA_URL, { signal: controller.signal });
-        if (!res.ok) throw new Error('Failed to fetch About section');
-        const data = await res.json();
-        setAboutData(data[lang].about);
-        setStatus('ready');
-      } catch (err) {
-        if (err.name === 'AbortError') return;
-        console.error(err);
-        setStatus('error');
-      }
-    };
-
-    loadAboutCopy();
-
-    return () => controller.abort();
-  }, [lang]);
-
-  const isInitialLoading = status === 'loading' && !aboutData;
-  const isRefetching = status === 'loading' && !!aboutData;
-
-  if (isInitialLoading) {
-    return (
-      <section className="max-w-5xl mx-auto px-4 py-12">
-        <div className="flex justify-center">
-          <Spinner />
-        </div>
-      </section>
-    );
-  }
-
-  if (status === 'error') return <p>Could not load About section.</p>;
-
-  const { title, mainText, pictureSubtitle } = aboutData;
+  const { title, mainText, pictureSubtitle } = websiteData.text[lang].about;
 
   const renderChunk = (chunk, key) =>
     chunk.type === 'link' ? (
