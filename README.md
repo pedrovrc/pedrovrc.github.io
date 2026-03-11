@@ -9,7 +9,7 @@ Personal portfolio site built with React and Tailwind CSS. Supports Portuguese a
 - **CV page** - skills, background, and experience rendered from JSON data
 - **Projects page** - fetches pinned repositories from the GitHub GraphQL API
 - **Contact form** - wired to [Formspree](https://formspree.io) with toast notifications
-- **Deployed automatically** via GitHub Actions on every push to `main`
+- **Deployed** via `npm run deploy` (builds with Vite, pushes `dist/` to the `gh-pages` branch)
 
 ## Stack
 - React 19 + React Router 7
