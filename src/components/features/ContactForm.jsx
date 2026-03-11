@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import { useLanguage } from '../../context/LanguageContext'
 
-const inputClass = "w-full rounded-md border border-white bg-white/90 px-3 py-2 text-black/90 placeholder:text-black/50 focus:border-fuchsia-400 focus:outline-none";
+const inputClass = "w-full rounded-md border border-white bg-white/90 px-3 py-2 text-black/90 placeholder:text-black/50 focus:border-fuchsia-400 focus:outline-none portrait:text-base";
 const buttonClass = "self-end rounded-md bg-fuchsia-300 px-6 py-2 text-sm shadow-sm font-semibold uppercase tracking-wide text-indigo-800 transition hover:bg-fuchsia-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-fuchsia-300 hover:shadow-md";
 
 const FormField = ({ label, children }) => (
@@ -52,7 +52,7 @@ const ContactForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="mx-auto flex max-w-lg flex-col gap-5 text-white p-4 text-left">
+        <form onSubmit={handleSubmit} className="mx-auto flex max-w-lg flex-col gap-5 portrait:gap-2 text-white p-4 portrait:p-2 text-left">
             <FormField label={ lang === 'pt' ? 'Nome' : 'Name' }>
                 <input
                     type="text"

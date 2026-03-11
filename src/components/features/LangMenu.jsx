@@ -9,9 +9,9 @@ const LangMenu = ({ buttonClass = '' }) => {
     return (
         <button
             onClick={() => toggleLang()}
-            className={`${buttonClass} flex flex-row gap-1.5 text-2xl content-center`}
+            className={`${buttonClass} flex flex-row gap-1.5 portrait:gap-0.5 text-2xl content-center`}
         >
-            <span className="text-sm">{ lang === 'pt' ? "PT-BR" : "EN-US" }</span>
+            <span className="text-sm portrait:text-xs">{ lang === 'pt' ? "PT-BR" : "EN-US" }</span>
             { lang === 'pt' ? <GiBrazilFlag /> : <LiaFlagUsaSolid /> }
         </button>
     )

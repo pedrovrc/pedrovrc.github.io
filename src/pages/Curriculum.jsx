@@ -21,12 +21,12 @@ const Curriculum = () => {
     : [];
 
   return (
-    <section className="relative max-w-5xl mx-auto px-16 py-12 text-lg text-gray-800">
+    <section className="relative max-w-5xl mx-auto px-16 py-8 portrait:px-8 portrait:py-8 text-lg portrait:text-base text-gray-800">
       {/* INTRODUCTION */}
       <section className="text-justify mb-8">
         <p className="mb-4">{opening}</p>
         <p>{jobseek}</p>
-        <div className="flex justify-end mt-2">
+        <div className="flex justify-end mt-2 portrait:mt-6">
           <a
             href={lang === 'en' ? 'https://flowcv.com/resume/83n68qpal3r3' : 'https://flowcv.com/resume/4ear5oome000'}
             target="_blank"

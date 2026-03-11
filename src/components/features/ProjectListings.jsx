@@ -25,7 +25,7 @@ const ProjectListings = () => {
     }, [])
 
     return (
-        <section className="bg-blue-50 px-4 py-10">
+        <section className="bg-blue-50 py-10 portrait:py-8">
             <div className="container-xl lg:container m-auto">
                 {loading ? (
                     <Spinner loading={loading} />

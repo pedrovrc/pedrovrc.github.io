@@ -9,8 +9,8 @@ const ContactPage = () => {
   const contactInfo = websiteData.contactInfo;
 
   return (
-    <section className="relative max-w-5xl mx-auto px-16 py-8 text-lg text-gray-800 text-justify">
-      <h1 className="text-3xl font-bold text-indigo-500 mb-2 text-center">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
+    <section className="relative max-w-5xl mx-auto px-16 py-8 portrait:px-4 text-lg text-gray-800 text-justify">
+      <h1 className="text-3xl font-bold text-indigo-500 mb-4 text-center">{ lang === 'en' ? contactInfo.titleEN : contactInfo.titlePT }</h1>
 
       <div className="bg-indigo-500 mt-4 mb-8 max-w-150 mx-auto rounded-md shadow-sm">
         <ContactForm />
@@ -18,12 +18,8 @@ const ContactPage = () => {
 
       <h2 className="text-2xl font-semibold text-indigo-500 mt-4 mb-2 text-center">{ lang === 'en' ? 'Or reach out through these links:' : 'Ou entre em contato por esses links:'}</h2>
 
-      <div className="grid gap-4 md:grid-cols-2 max-w-150 mx-auto mb-12">
+      <div className="grid gap-4 md:grid-cols-2 max-w-150 portrait:max-w-60 mx-auto mb-12 mt-4">
         {[{
-          label: 'Email',
-          value: contactInfo.email,
-          href: contactInfo.email ? `mailto:${contactInfo.email}` : null,
-        }, {
           label: 'LinkedIn',
           value: contactInfo.linkedin,
           href: contactInfo.linkedin ? `https://${contactInfo.linkedin}` : null,
@@ -31,6 +27,10 @@ const ContactPage = () => {
           label: 'GitHub',
           value: contactInfo.github,
           href: contactInfo.github ? `https://${contactInfo.github}` : null,
+        }, {
+          label: 'Email',
+          value: contactInfo.email,
+          href: contactInfo.email ? `mailto:${contactInfo.email}` : null,
         }, {
           label: 'Landing Page',
           value: contactInfo.carrd,
@@ -47,7 +47,7 @@ const ContactPage = () => {
               <p className="flex items-center justify-center gap-2 text-white font-semibold tracking-wide text-xl">{label} <LuExternalLink /></p>
             </div>
             <div className="bg-white px-2 py-2">
-              <p className="text-center text-gray-800 wrap-break-word group-hover:text-indigo-800 group-hover:underline group-hover:font-semibold">{value || '—'}</p>
+              <p className="text-center text-base text-gray-800 wrap-break-word group-hover:text-indigo-800 group-hover:underline group-hover:font-semibold">{value || '—'}</p>
             </div>
           </a>
         ))}
