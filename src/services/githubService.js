@@ -1,62 +1,39 @@
-const GITHUB_API_URL = "https://api.github.com/users/pedrovrc/repos?sort=updated";
+const FEATURED_REPOS = [
+    'pedrovrc.github.io',
+    'krita-timelapse-resizer',
+    'Rest-in-Peace',
+    'React-Crash-Course',
+    'Django',
+    'Flask',
+];
 
-export async function fetchRepos() {
-    const response = await fetch(GITHUB_API_URL);
+const BASE = 'https://api.github.com/repos/pedrovrc';
+const HEADERS = { Accept: 'application/vnd.github+json' };
 
-    if (!response.ok) {
-        throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
-    }
+async function fetchRepoData(name) {
+    const [repoRes, topicsRes] = await Promise.all([
+        fetch(`${BASE}/${name}`, { headers: HEADERS }),
+        fetch(`${BASE}/${name}/topics`, { headers: HEADERS }),
+    ]);
 
-    return response.json();
+    if (!repoRes.ok) throw new Error(`GitHub API error: ${repoRes.status} ${repoRes.statusText}`);
+
+    const repo = await repoRes.json();
+    const { names: topicNames } = topicsRes.ok ? await topicsRes.json() : { names: [] };
+
+    return {
+        name: repo.name,
+        description: repo.description,
+        url: repo.html_url,
+        stargazerCount: repo.stargazers_count,
+        forkCount: repo.forks_count,
+        primaryLanguage: repo.language ? { name: repo.language, color: null } : null,
+        repositoryTopics: {
+            nodes: topicNames.map((t) => ({ topic: { name: t } })),
+        },
+    };
 }
 
 export async function fetchPinnedRepos() {
-    const token = import.meta.env.VITE_GITHUB_TOKEN;
-
-    const query = `{
-        user(login: "pedrovrc") {
-            pinnedItems(first: 6, types: REPOSITORY) {
-                nodes {
-                    ... on Repository {
-                        name
-                        description
-                        url
-                        stargazerCount
-                        forkCount
-                        primaryLanguage {
-                            name
-                            color
-                        }
-                        repositoryTopics(first: 5) {
-                            nodes {
-                                topic {
-                                    name
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }`;
-
-    const response = await fetch("https://api.github.com/graphql", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ query }),
-    });
-
-    if (!response.ok) {
-        throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
-    }
-
-    const { data, errors } = await response.json();
-    if (errors) {
-        throw new Error(`GraphQL error: ${errors[0].message}`);
-    }
-
-    return data.user.pinnedItems.nodes;
+    return Promise.all(FEATURED_REPOS.map(fetchRepoData));
 }

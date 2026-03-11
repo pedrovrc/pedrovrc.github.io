@@ -3,6 +3,23 @@ import { FaStar, FaCodeBranch } from 'react-icons/fa';
 import { LuExternalLink  } from 'react-icons/lu';
 import { useLanguage } from '../../context/LanguageContext';
 
+const LANGUAGE_COLORS = {
+    JavaScript: '#F7DF1E',
+    TypeScript: '#3178C6',
+    Python: '#3776AB',
+    HTML: '#E34C26',
+    CSS: '#563D7C',
+    'C++': '#00599C',
+    C: '#555555',
+    Java: '#B07219',
+    Ruby: '#CC342D',
+    Go: '#00ADD8',
+    Rust: '#DEA584',
+    Shell: '#89E051',
+    Vue: '#41B883',
+    Svelte: '#FF3E00',
+};
+
 const getContrastColor = (hex) => {
     const h = hex.replace('#', '');
     const r = parseInt(h.substring(0, 2), 16);
@@ -26,8 +43,8 @@ const RepoCard = ({ repo }) => {
                     <span
                         className="text-xs font-medium px-2 py-1 rounded-full shrink-0"
                         style={{
-                            backgroundColor: repo.primaryLanguage.color ?? '#6366f1',
-                            color: getContrastColor(repo.primaryLanguage.color ?? '#6366f1'),
+                            backgroundColor: repo.primaryLanguage.color ?? LANGUAGE_COLORS[repo.primaryLanguage.name] ?? '#6366f1',
+                            color: getContrastColor(repo.primaryLanguage.color ?? LANGUAGE_COLORS[repo.primaryLanguage.name] ?? '#6366f1'),
                         }}
                     >
                         {repo.primaryLanguage.name}
