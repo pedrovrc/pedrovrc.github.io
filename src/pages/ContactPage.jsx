@@ -18,7 +18,7 @@ const ContactPage = () => {
 
       <h2 className="text-2xl font-semibold text-indigo-500 mt-4 mb-2 text-center">{ lang === 'en' ? 'Or reach out through these links:' : 'Ou entre em contato por esses links:'}</h2>
 
-      <div className="grid gap-4 md:grid-cols-2 max-w-150 portrait:max-w-60 mx-auto mb-12 mt-4">
+      <div className="grid gap-4 md:grid-cols-2 max-w-150 portrait:px-8 mx-auto mb-12 mt-4">
         {[{
           label: 'LinkedIn',
           value: contactInfo.linkedin,
