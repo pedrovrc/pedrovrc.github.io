@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    SiJavascript, SiReact, SiPython, SiDjango, SiCplusplus, SiGit, SiGithub, SiDocker
+    SiJavascript, SiReact, SiTailwindcss, SiPython, SiDjango, SiGit, SiGithub, SiDocker
 } from 'react-icons/si';
 import { DiVisualstudio } from 'react-icons/di'
 import { GrMysql } from "react-icons/gr";
@@ -8,19 +8,22 @@ import websiteData from '../../websiteData.json';
 import { useLanguage } from '../../context/LanguageContext';
 import HomeCard from '../ui/HomeCard';
 
+const ICON_SIZE = 40;
+
 const STACK = [
-    { icon: <SiJavascript size={40} color="#F7DF1E" />, label: 'JavaScript' },
-    { icon: <SiReact size={40} color="#61DAFB" />, label: 'React' },
-    { icon: <SiPython size={40} color="#3776AB" />, label: 'Python' },
-    { icon: <SiDjango size={40} color="#092E20" />, label: 'Django' },
+    { icon: <SiJavascript size={ICON_SIZE} color="#F7DF1E" />, label: 'JavaScript' },
+    { icon: <SiReact size={ICON_SIZE} color="#61DAFB" />, label: 'React' },
+    { icon: <SiTailwindcss size={ICON_SIZE} color="#06B6D4" />, label: 'Tailwind' },
+    { icon: <SiPython size={ICON_SIZE} color="#3776AB" />, label: 'Python' },
+    { icon: <SiDjango size={ICON_SIZE} color="#092E20" />, label: 'Django' },
 ];
 
 const TOOLS = [
-    { icon: <DiVisualstudio size={40} color="#007ACC" />, label: 'VS Code' },
-    { icon: <SiGit size={40} color="#F05032" />, label: 'Git' },
-    { icon: <SiGithub size={40} color="#181717" />, label: 'GitHub' },
-    { icon: <SiDocker size={40} color="#2496ED" />, label: 'Docker' },
-    { icon: <GrMysql size={40} color="#4479A1" />, label: 'MySQL' },
+    { icon: <DiVisualstudio size={ICON_SIZE} color="#007ACC" />, label: 'VS Code' },
+    { icon: <SiGit size={ICON_SIZE} color="#F05032" />, label: 'Git' },
+    { icon: <SiGithub size={ICON_SIZE} color="#181717" />, label: 'GitHub' },
+    { icon: <SiDocker size={ICON_SIZE} color="#2496ED" />, label: 'Docker' },
+    { icon: <GrMysql size={ICON_SIZE} color="#4479A1" />, label: 'MySQL' },
 ];
 
 const IconGrid = ({ items }) => (
