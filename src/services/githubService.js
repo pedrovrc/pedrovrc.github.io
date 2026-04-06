@@ -1,10 +1,10 @@
 const FEATURED_REPOS = [
     'pedrovrc.github.io',
     'krita-timelapse-resizer',
-    'Rest-in-Peace',
     'React-Crash-Course',
     'Django',
     'Flask',
+    'IMC',
 ];
 
 const BASE = 'https://api.github.com/repos/pedrovrc';
